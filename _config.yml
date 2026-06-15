@@ -1,0 +1,8 @@
+title: 2025 WiCyS Target Cyber Defense CTF Write-Ups
+description: This page showcases my participation in the 2025 Target Cyber Defense CTF Challenge hosted by WiCys, which ran from July 1 through August 14, 2025.
+baseurl: "/2025_wicys_target_ctf"
+url: "https://glsanclem.github.io"
+theme: jekyll-theme-hacker
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
