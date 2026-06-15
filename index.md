@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "2025 WiCyS Target Cyber Defense CTF"
+title: "US Cyber Open Challenge 2026 CTF Technical Writeup"
 hero:
-  heading: "2025 Target Cyber Defense Challenge CTF Write-Up"
-  text: "This page showcases my participation in the 2025 Target Cyber Defense CTF Challenge hosted by WiCyS, which ran from July 1 through August 14, 2025."
+  heading: "US Cyber Open Challenge 2026 CTF Technical Writeup"
+  text: "Selected CTF challenges, methodologies, and technical analysis from the Season VI: 2026 US Cyber Open, June 5 to 14, 2026."
 ---
 
 ## INTRO
@@ -11,25 +11,26 @@ hero:
 <img src="/2025_wicys_target_ctf/assets/images/a1-target-tier1-badge.png" alt="Tier 1 Badge" style="float: right; margin-left: 15px; width: 300px;" />
 
 <p>
-The 2025 Target + WiCyS Cyber Defense Challenge was a Capture the Flag (CTF)-themed event. This writeup shows my methodology, including tactics, techniques, and procedures in the challenge. As a social scientist, I wanted to try something completely new that would challenge my mind, and it was my first time participating in a CTF event. The event allowed me to gain more practical and technical skills, push myself further, and think outside the box while solving cybersecurity issues.
-</p>
+The 2026 US Cyber Open was a Capture the Flag (CTF)-themed event. This writeup shows my methodology, techniques, and procedures during the CTF game. I was researching a way to balance out my social science background with more technical skills and participating in CTF events helps me to hone in on those skills. This CTF event challenged my mind and while there were moments I was ready to throw in the towel, I kept remembering my purpose--**to learn**. In the end, the event allowed me to continue to gain more technical skills and learn cybersecurity lingos. My mind and curiosity was pushed further and I was able to think outside the box during the process of solving cybersecurity issues. The process was fascinating! 
 
 <p>
-There were two tiers: Tier 1 is primarily blue team focused and Tier 2 is red team. This write up is based on my experience from Tier 1. I completed 14 challenges in Tier 1, which included the preliminary and main challenges. Each stage had different levels of difficulty, and you could only progress by capturing the flag. While the MITRE ATT&CK framework encompasses over 300 adversarial tactics, techniques, and common knowledge, I explored the connections during the challenges and added a few to this write up as a way to build familiarity.
+I completed a total of six challenges and yes, even during the week of the NBA Finals (go Knicks!) and the FIFA World Cup. While I didn't complete all the challenges, I pat myself on the back for putting myself out there and competing with exceptional talents from around the world. It's a win for me...goooooooooal!!!! ⚽
 </p>
+
+## STRUCTURE
+  
+The event consisted of participating in two game rooms: Beginner's and Competitive CTF. The Beginner's Game Room is an entry-level CTF for those participants that wanted to start slow and ease into the competition, newbies, semi-newbies,and even experts who wanted to get their feet wet and gain motivation. It was basically the warm-up round. The Competitive CTF put us to the test and provided challenges that ranged from easy and intermediate to advance. 
+
+All of the challenges were independent from one another, which made it easy to move between them without needing to follow a set order. Since I was not able to progress into the more advanced tiers of the CTF, this reflection is based only on the challenges I completed. Each challenge also came from different organizations or cybersecurity contributors, which added variety and made it interesting to see how different perspectives shaped each problem.
 
 <div style="clear: both;"></div>
 
 ## KEY TAKEAWAYS
 
-- Strengthened network analysis, intelligence analysis, and digital forensics skills through mock hands-on CTF challenges.
-- Learned to use various sources of research methods from manual to automation analysis during complex investigations.
-- Practiced negotiation and incident response techniques in ransomware scenarios.
-- Reinforced the importance of having patience, persistence, determination, and analytical thinking when handling cybersecurity challenges.
-
-## SCENARIO
-
-In Tier 1, we worked through simulated cyberattack scenarios against a tech company, Personalyz.io, to test our ability to detect, analyze, and respond to threats. Personalyz.io is a mid-size company with 500 employees that offered data collection SaaS products for the purpose of targeted ads. Personalyz.io received a ransom demand, and we played the defender to identify the intrusion and determine how the data was exfiltrated. The challenges focused on threat detection, digital forensics, incident response, network analysis, and threat intelligence.
+- Built stronger confidence working through real CTF challenges under time pressure, focusing on staying calm and methodical instead of rushing
+- Improved ability to connect clues across different challenge types, especially in mixed environment where context switching matters
+- Strengthened practical investigation thinking by breaking problems into smaller steps and validating each result before moving forward
+- Gained a clearer understanding of personal workflow during challenges, including when to slow down, reassess, and double check assumptions
 
 ## PRACTICE CHALLENGES
 
@@ -136,4 +137,4 @@ Click on any box below to view the challenge.
 
 ## DISCLAIMER 
 
-These write-ups provide educational insight into the process I followed to complete each challenge. Since Tier 1 officially ended, we were given the green flag (pun intended) to create our write-ups, including the flag answers.
+These write-ups provide educational insight into the process I followed to complete each challenge.
