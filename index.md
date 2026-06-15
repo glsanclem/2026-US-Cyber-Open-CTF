@@ -8,10 +8,10 @@ hero:
 
 ## INTRO
 
-<img src="/2025_wicys_target_ctf/assets/images/a1-target-tier1-badge.png" alt="Tier 1 Badge" style="float: right; margin-left: 15px; width: 300px;" />
+<img src="/2026-US-Cyber-Open-CTF/assets/images/a1-us-cyber-open-logo-1.png" alt="Cyber Open Logo" style="float: right; margin-left: 15px; width: 300px;" />
 
 <p>
-The 2026 US Cyber Open was a Capture the Flag (CTF)-themed event. This writeup shows my methodology, techniques, and procedures during the CTF game. I was researching a way to balance out my social science background with more technical skills and participating in CTF events helps me to hone in on those skills. This CTF event challenged my mind and while there were moments I was ready to throw in the towel, I kept remembering my purpose--**to learn**. In the end, the event allowed me to continue to gain more technical skills and learn cybersecurity lingos. My mind and curiosity was pushed further and I was able to think outside the box during the process of solving cybersecurity issues. The process was fascinating! 
+The 2026 US Cyber Open was a Capture the Flag (CTF)-themed event. This writeup shows my methodology, techniques, and procedures during the CTF game. I was researching a way to balance out my social science background with more technical skills and participating in CTF events helps me to hone in on those skills. This CTF event challenged my mind and while there were moments I was ready to throw in the towel, I kept remembering my purpose-- **to learn**. In the end, the event allowed me to continue to gain more technical skills and learn cybersecurity lingos. My mind and curiosity was pushed further and I was able to think outside the box during the process of solving cybersecurity issues. The process was fascinating! 
 
 <p>
 I completed a total of six challenges and yes, even during the week of the NBA Finals (go Knicks!) and the FIFA World Cup. While I didn't complete all the challenges, I pat myself on the back for putting myself out there and competing with exceptional talents from around the world. It's a win for me...goooooooooal!!!! ⚽
@@ -32,104 +32,52 @@ All of the challenges were independent from one another, which made it easy to m
 - Strengthened practical investigation thinking by breaking problems into smaller steps and validating each result before moving forward
 - Gained a clearer understanding of personal workflow during challenges, including when to slow down, reassess, and double check assumptions
 
-## PRACTICE CHALLENGES
+## COMPLETED CHALLENGES
 
 Click on any box below to view the challenge.
 
 <div class="challenge-grid">
 
   <div class="challenge-box">
-    <h3><a href="practice_challenges/p1-wicys-welcome">P1. wicys[Welcome]</a></h3>
-    <p><strong>Points:</strong> 30</p>
-    <p><strong>Category:</strong> Tutorial</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="practice_challenges/p2-hidden-challenges">P2. Hidden Challenges</a></h3>
-    <p><strong>Points:</strong> 40</p>
-    <p><strong>Category:</strong> Recon</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="practice_challenges/p3-1-sub-challenge">P3.1 Sub Challenge</a></h3>
-    <p><strong>Points:</strong> 50</p>
-    <p><strong>Category:</strong> Misc</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="practice_challenges/p3-2-limited-attempts">P3.2 Limited Attempts</a></h3>
-    <p><strong>Points:</strong> 50</p>
-    <p><strong>Category:</strong> Misc</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="practice_challenges/p4-hints">P4. Hints</a></h3>
-    <p><strong>Points:</strong> 20</p>
-    <p><strong>Category:</strong> Tutorial</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="practice_challenges/p5-cooperation">P5. Cooperation</a></h3>
-    <p><strong>Points:</strong> 60</p>
-    <p><strong>Category:</strong> Collaboration</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="practice_challenges/p6-scenario">P6. Scenario</a></h3>
-    <p><strong>Points:</strong> 70</p>
-    <p><strong>Category:</strong> Scenario</p>
-  </div>
-
-</div>
-
-
-
-## MAIN CHALLENGES
-
-Click on any box below to view the challenge.
-
-<div class="challenge-grid">
-
-  <div class="challenge-box">
-    <h3><a href="main_challenges/d1-mystery-mail">D1. Mystery Mail</a></h3>
+    <h3><a href="completed_challenges/mr-jiggles">Mr. Jiggles</a></h3>
     <p><strong>Points:</strong> 100</p>
-    <p><strong>Category:</strong> Email</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="main_challenges/d2-not-so-simple-mail-protocol">D2. Not So Simple Mail Protocol</a></h3>
-    <p><strong>Points:</strong> 150</p>
-    <p><strong>Category:</strong> Networking</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="main_challenges/d3-ransom-wrangler">D3. Ransom Wrangler</a></h3>
-    <p><strong>Points:</strong> 200</p>
-    <p><strong>Category:</strong> Malware</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="main_challenges/d5-ahoy-pcapn">D5. Ahoy, PCAP'n!</a></h3>
-    <p><strong>Points:</strong> 120</p>
-    <p><strong>Category:</strong> Packet Analysis</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="main_challenges/d6-smuggled-away">D6. Smuggled Away</a></h3>
-    <p><strong>Points:</strong> 180</p>
-    <p><strong>Category:</strong> Steganography</p>
-  </div>
-
-  <div class="challenge-box">
-    <h3><a href="main_challenges/d7-endpoints-exfiltration">D7. Endpoints and Exfiltration</a></h3>
-    <p><strong>Points:</strong> 220</p>
     <p><strong>Category:</strong> Forensics</p>
+    <p><strong>Difficulty:</strong> Beginner</p>
   </div>
 
   <div class="challenge-box">
-    <h3><a href="main_challenges/d8-shadow-commit">D8. Shadow Commit</a></h3>
-    <p><strong>Points:</strong> 250</p>
-    <p><strong>Category:</strong> Git/Version Control</p>
+    <h3><a href="completed_challenges/up-to-date">Up to Date</a></h3>
+    <p><strong>Points:</strong> 100</p>
+    <p><strong>Category:</strong> Misc</p>
+    <p><strong>Difficulty:</strong> Beginner</p>
+  </div>
+
+  <div class="challenge-box">
+    <h3><a href="completed_challenges/noncensense">Noncensense</a></h3>
+    <p><strong>Points:</strong> 100</p>
+    <p><strong>Category:</strong> Crypto</p>
+    <p><strong>Difficulty:</strong> Beginner</p>
+  </div>
+
+  <div class="challenge-box">
+    <h3><a href="completed_challenges/souvenirs">Souvenirs</a></h3>
+    <p><strong>Points:</strong> 132</p>
+    <p><strong>Category:</strong> Forensics</p>
+    <p><strong>Difficulty:</strong> Easy</p>
+  </div>
+
+  <div class="challenge-box">
+    <h3><a href="completed_challenges/broken-envelope">Brokn Envelope</a></h3>
+    <p><strong>Points:</strong> 162</p>
+    <p><strong>Category:</strong> Forensics</p>
+    <p><strong>Difficulty:</strong> Medium</p>
+  </div>
+
+  <div class="challenge-box">
+    <h3><a href="completed_challenges/manifest">Manifest</a></h3>
+    <p><strong>Points:</strong> 205</p>
+    <p><strong>Category:</strong> Network Forensics</p>
+    <p><strong>Difficulty:</strong> Hard</p>
   </div>
 
 </div>
@@ -137,4 +85,5 @@ Click on any box below to view the challenge.
 
 ## DISCLAIMER 
 
-These write-ups provide educational insight into the process I followed to complete each challenge.
+These write ups are shared for educational and informational purposes and reflect the process I used to approach and solve each challenge. Content may not be reproduced or redistributed without permission from the author.
+
