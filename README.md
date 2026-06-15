@@ -1,2 +1,2 @@
-# 2025_wicys_target_ctf
-CTF writeups for the 2025 Target Cyber Defense Challenge
+# 2026-US-Cyber-Open-CTF
+Cybersecurity CTF writeups and technical walkthrough for the 2026 US Cyber Open Challenge, including methodology and tools. 
