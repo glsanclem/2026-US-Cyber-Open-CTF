@@ -8,7 +8,7 @@ hero:
 
 ## INTRO
 
-<img src="/2026-US-Cyber-Open-CTF/assets/images/a1-us-cyber-open-logo-1.png" alt="Cyber Open Logo" style="float: right; margin-left: 15px; width: 300px;" />
+<img src="/2026-US-Cyber-Open-CTF/assets/images/1-home-us-cyber-open-logo.png" alt="Cyber Open Logo" style="float: right; margin-left: 15px; width: 300px;" />
 
 <p>
 The 2026 US Cyber Open was a Capture the Flag (CTF)-themed event. This writeup shows my methodology, techniques, and procedures during the CTF game. I was researching a way to balance out my social science background with more technical skills and participating in CTF events helps me to hone in on those skills. This CTF event challenged my mind and while there were moments I was ready to throw in the towel, I kept remembering my purpose-- **to learn**. In the end, the event allowed me to continue to gain more technical skills and learn cybersecurity lingos. My mind and curiosity was pushed further and I was able to think outside the box during the process of solving cybersecurity issues. The process was fascinating! 
@@ -32,7 +32,7 @@ All of the challenges were independent from one another, which made it easy to m
 - Strengthened practical investigation thinking by breaking problems into smaller steps and validating each result before moving forward
 - Gained a clearer understanding of personal workflow during challenges, including when to slow down, reassess, and double check assumptions
 
-<img src="/2026-US-Cyber-Open-CTF/assets/images/a1-season-vi.png" alt="Season VI Logo" style="float: right; margin-left: 15px; width: 300px;" />
+<img src="/2026-US-Cyber-Open-CTF/assets/images/1-home-season-vi.png" alt="Season VI Logo" style="float: right; margin-left: 15px; width: 300px;" />
 
 ## COMPLETED CHALLENGES
 
