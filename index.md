@@ -32,6 +32,8 @@ All of the challenges were independent from one another, which made it easy to m
 - Strengthened practical investigation thinking by breaking problems into smaller steps and validating each result before moving forward
 - Gained a clearer understanding of personal workflow during challenges, including when to slow down, reassess, and double check assumptions
 
+<img src="/2026-US-Cyber-Open-CTF/assets/images/a1-season-vi.png" alt="Season VI Logo" style="float: right; margin-left: 15px; width: 300px;" />
+
 ## COMPLETED CHALLENGES
 
 Click on any box below to view the challenge.
