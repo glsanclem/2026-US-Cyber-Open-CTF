@@ -41,42 +41,42 @@ Click on any box below to view the challenge.
 <div class="challenge-grid">
 
   <div class="challenge-box">
-    <h3><a href="completed_challenges/mr-jiggles">Mr. Jiggles</a></h3>
+    <h3><a href="main_challenges/mr-jiggles">Mr. Jiggles</a></h3>
     <p><strong>Points:</strong> 100</p>
     <p><strong>Category:</strong> Forensics</p>
     <p><strong>Difficulty:</strong> Beginner</p>
   </div>
 
   <div class="challenge-box">
-    <h3><a href="completed_challenges/up-to-date">Up to Date</a></h3>
+    <h3><a href="main_challenges/up-to-date">Up to Date</a></h3>
     <p><strong>Points:</strong> 100</p>
     <p><strong>Category:</strong> Misc</p>
     <p><strong>Difficulty:</strong> Beginner</p>
   </div>
 
   <div class="challenge-box">
-    <h3><a href="completed_challenges/noncensense">Noncensense</a></h3>
+    <h3><a href="main_challenges/noncensense">Noncensense</a></h3>
     <p><strong>Points:</strong> 100</p>
     <p><strong>Category:</strong> Crypto</p>
     <p><strong>Difficulty:</strong> Beginner</p>
   </div>
 
   <div class="challenge-box">
-    <h3><a href="completed_challenges/souvenirs">Souvenirs</a></h3>
+    <h3><a href="main_challenges/souvenirs">Souvenirs</a></h3>
     <p><strong>Points:</strong> 132</p>
     <p><strong>Category:</strong> Forensics</p>
     <p><strong>Difficulty:</strong> Easy</p>
   </div>
 
   <div class="challenge-box">
-    <h3><a href="completed_challenges/broken-envelope">Brokn Envelope</a></h3>
+    <h3><a href="main_challenges/broken-envelope">Brokn Envelope</a></h3>
     <p><strong>Points:</strong> 162</p>
     <p><strong>Category:</strong> Forensics</p>
     <p><strong>Difficulty:</strong> Medium</p>
   </div>
 
   <div class="challenge-box">
-    <h3><a href="completed_challenges/manifest">Manifest</a></h3>
+    <h3><a href="main_challenges/manifest">Manifest</a></h3>
     <p><strong>Points:</strong> 205</p>
     <p><strong>Category:</strong> Network Forensics</p>
     <p><strong>Difficulty:</strong> Hard</p>
