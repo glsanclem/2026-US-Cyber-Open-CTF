@@ -98,7 +98,7 @@ Adversaries may use steganography techniques in order to prevent the detection o
 
 **Obfuscated Files or Information: Steganography**
 
-<p align="right">| Field | Details |
+| Field | Details |
 |--------|---------|
 | ID | T1027.003 |
 | Tactic | Stealth |
