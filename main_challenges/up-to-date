@@ -45,16 +45,46 @@ The **Terminal** was used as a primary tool to execute **Python** (`python3 solv
 
 The first step included analyzing the file `chall.py` to understand how the secret was hidden. To open the python file, I right clicked and opened the file with **text editor**.
 
-{  INSERT: CHALL.PNG }
+<p align="center">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-chall.png" alt="Chall graphic" width="800">
+</p>
+
+I discovered the `chall.py` file included secret text split into five chunks and each chunk was wrapped in a packet starting with a Magic Header (ZN), followed by a Sequence (Seq) number, and the Length (Len) of the data. It seems like the script added fake noise to the file to confuse the search tools.
+
+I used the Python script, `solve.py` to recover the flag, which scanned the `output.txt` file for the ZN magic bytes.
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/2-jiggles-gibberish numberletters.png" alt="terminal gibberish graphic" width="800">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-output.png" alt="Chall graphic" width="800">
 </p>
+
+It also checked if the packet started with the correct Sequence ID; and placed the chunks in order back together. A piece of code was recovered in a fictional language called **Zen-C**.
+
+<p align="center">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-solv.png" alt="Chall graphic" width="800">
+</p>
+
+The recovered Zen-C code looked like the following which is called a *XOR Cipher*:
+
+`let code = [0x11, 0x14, ...]; let key = 0x42; for b in code { print(char(b ^ key)); }`
+
+The  `^` symbol means XOR. Every number in the code list was examined and XORed it with the key `0x42` and the flag was revealed!
+
+<p align="center">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-flag-revealed.png" alt="Chall graphic" width="800">
+</p>
+
 
 ---
 
 ## Flag
-`SVIBRG{Y0u_F0unD_Mr_J1GgL3$!}`
+`SVIBGR{z3n_c_v1b3_da7a_gr4m}`
+
+---
+### Key Lessons
+
+- **Careful with running the challenge script:** Often, `chall.py` is just a map to show how the puzzle was made. Running it can overwrite the evidence (like what happened to the `output.txt`).
+- **Magic Bytes are Clues:** Whenever you see a repeating pattern like `ZN` in a hex file, it's usually a "Header" that tells you where a piece of important data starts.
+- **XOR Spotting:** In cybersecurity, If you see a list of hex numbers and a single "key" (like `0x42`), it is almost always an XOR cipher.
 
 ---
 
