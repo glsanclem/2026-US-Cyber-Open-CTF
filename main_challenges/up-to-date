@@ -43,13 +43,15 @@ The **Terminal** was used as a primary tool to execute **Python** (`python3 solv
 
 ## Methodology + Solution
 
-The first step included analyzing the file `chall.py` to understand how the secret was hidden. To open the python file, I right clicked and opened the file with **text editor**.
+The first step included analyzing the file `chall.py` to understand how the secret was hidden. To open the python file, I right clicked and opened the file with a **text editor**.
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-chall.png" alt="Chall graphic" width="800">
 </p>
 
-I discovered the `chall.py` file included secret text split into five chunks and each chunk was wrapped in a packet starting with a Magic Header (ZN), followed by a Sequence (Seq) number, and the Length (Len) of the data. It seems like the script added fake noise to the file to confuse the search tools.
+I discovered the `chall.py` file included secret text split into five chunks and each chunk was wrapped was in a packet starting with a Magic Header (ZN), followed by a Sequence (Seq) number, and the Length (Len) of the data. It seems like the script added fake noise to the file to confuse the search tools.
+
+Since the challenge also included a file called `solve.py`, I took a look at it to better understand how the packets were being reconstructed. 
 
 I used the Python script, `solve.py` to recover the flag, which scanned the `output.txt` file for the ZN magic bytes.
 
@@ -57,17 +59,13 @@ I used the Python script, `solve.py` to recover the flag, which scanned the `out
   <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-output.png" alt="Chall graphic" width="800">
 </p>
 
-It also checked if the packet started with the correct Sequence ID; and placed the chunks in order back together. A piece of code was recovered in a fictional language called **Zen-C**.
+It also checked if the packet started with the correct Sequence ID and placed the chunks back together in the proper order. A piece of code was recovered in a fictional language called **Zen-C**.
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-solv.png" alt="Chall graphic" width="800">
 </p>
 
-The recovered Zen-C code looked like the following which is called a *XOR Cipher*:
-
-`let code = [0x11, 0x14, ...]; let key = 0x42; for b in code { print(char(b ^ key)); }`
-
-The  `^` symbol means XOR. Every number in the code list was examined and XORed it with the key `0x42` and the flag was revealed!
+The recovered Zen-C code revealed an XOR Cipher that used a single key (`0x42`)and the flag was revealed! 
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-flag-revealed.png" alt="Chall graphic" width="800">
@@ -84,31 +82,20 @@ The  `^` symbol means XOR. Every number in the code list was examined and XOR
 
 - **Careful with running the challenge script:** Often, `chall.py` is just a map to show how the puzzle was made. Running it can overwrite the evidence (like what happened to the `output.txt`).
 - **Magic Bytes are Clues:** Whenever you see a repeating pattern like `ZN` in a hex file, it's usually a "Header" that tells you where a piece of important data starts.
-- **XOR Spotting:** In cybersecurity, If you see a list of hex numbers and a single "key" (like `0x42`), it is almost always an XOR cipher.
+- **XOR Spotting:** If you see a list of hex numbers and a single key, such as`0x42`, it is often that XOR was used to hide the data.
 
 ---
 
 ## MITRE ATT&CK
 <span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
 
-In this challenge, the cat owner wanted to know more information of its cat from the photo they used in the flyer. Here, it's the victim and not the adversary seeking intelligence. MITRE ATT&CK is from the attacker's perspective, not the defender's or analyst's perspective. Thus, I believe there is no direct MITRE ATT&CK mapping identified in this challenge.
-
-However, let's look beyond the cat owner's perspective, and flip the script. Suppose someone else gave the owner the photo with malicious intentions which creates a code on the victims system. As soon as the cat owner downloads the photo to create the flyers, they get a malware on their computer.
-
-Adversaries may use steganography techniques in order to prevent the detection of hidden information. Steganographic techniques can be used to hide data in digital media such as images, audio tracks, video clips, or text files. For example, hackers can hide ##PowerShell## commands in an image file (.png) and execute the code on a victim's system, which can gather intel from the victim's machine and communicate back to the adversary.
-
-**Obfuscated Files or Information: Steganography**
-*ID*:         T1027.003
-*Tactic*:     Stealth
-*Mitigation*: This type of attack can't be easily mitigated since it's an abuse of system features. 
-*Detection Strategy*: ID-DET0119, Detection Strategy for Steganographic Abuse in File & Script Execution
-
+This challenge required reconstructing fragmented data and decoding an XOR protected payload to recover the hidden information.
 
 | Field | Details |
-|--------|---------|
-| ID | T1027.003 |
-| Tactic | Stealth |
-| Mitigation | This type of attack can't be easily mitigated since it's an abuse of system features. |
-| Detection Strategy | ID-DET0119, Steganographic Abuse in File & Script Execution. AN0333: Detects manipulation of PNG, JPG, or GIF files by user-initiated scripts followed by script execution or exfiltration behavior, especially from osascript, python, or bash, in combination with LaunchAgent persistence or curl activity. |
+|:--------|:---------|
+| ID | T1140 |
+| Tactic | Defense Evasion |
+| Mitigation | Review scripts and encoded files for hidden or obfuscated content. Analyze suspicious files inn controlled environment before execution. |
+| Detection Strategy | Monitor for tools, scripts, or processes that decode, deobfuscate, or reconstruct encoded information from files. |
 
 Source: https://attack.mitre.org
