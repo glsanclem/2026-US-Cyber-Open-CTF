@@ -23,7 +23,7 @@ Mr. Jiggles my pet cat ran away and when I put up flyers this was the photo I us
 ---
 
 ## Objective
-The objective of the challenge is to extract data about "Mr. Jiggles" and possibly learn more about his whereabouts.
+The objective of the challenge is to extract data about Mr. Jiggles and possibly learn more about his whereabouts.
 
 ---
 
