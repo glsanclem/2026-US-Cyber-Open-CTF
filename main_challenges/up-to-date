@@ -21,7 +21,7 @@ Our newly hired developer at our company seems to be big on vibe coding, and ask
 ---
 
 ## Objective
-The objective was to recover the hidden “flag” from a set of provided files (`chall.py` and `output.txt`).
+The objective was to recover the hidden flag from a set of provided files (`chall.py` and `output.txt`).
 
 ---
 
@@ -31,7 +31,7 @@ The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 ---
 
 ## Tools Used
-The **Terminal** (primary tool) was used to execute **Python** (python3 solve.py) and **File Management** to navigate all of the folders from the Desktop to organizing the output.txt, chall.py, and solve.py files.
+The **Terminal** was used as a primary tool to execute **Python** (`python3 solve.py`) and **File Management** to navigate all of the folders from the Desktop to organizing the `output.txt`, `chall.py`, and `solve.py` files.
 
 <span style="color:yellow; font-style:italic;">Summary:</span>
 - **Editor:** TextEdit
@@ -43,45 +43,12 @@ The **Terminal** (primary tool) was used to execute **Python** (python3 solve.py
 
 ## Methodology + Solution
 
-Open the computer `Terminal`, type `cd` followed by a space, drag and drop the folder where the image is locatd into the terminal window. It looks something like this:
+The first step included analyzing the file `chall.py` to understand how the secret was hidden. To open the python file, I right clicked and opened the file with **text editor**.
 
-`cd /Users/yourname/Desktop/my_images`
-
-Press Enter, run the following command, and hit Enter again:
-
-`strings your_image_name.jpg`
-
-Replace `your_image_name.jpg` with the actual name of your file.
-
-In the terminal, I noticed a bunch of gibberish appeared (letters and numbers): 
+{  INSERT: CHALL.PNG }
 
 <p align="center">
   <img src="/2025_wicys_target_ctf/assets/images/2-jiggles-gibberish numberletters.png" alt="terminal gibberish graphic" width="800">
-</p>
-
-I then installed `binwalk` in the terminal since the data wasn't written in plain text. However, binwalk took forever to install. 
-
-**Note to self and the viewers**: Remember to install any necessary software prior to the challenges. But in my case my laptop is an older model, I didn’t know which program were truly necessary.
-
-Next, I remembered from a previous CTF challenge, **CyberChef**, which helps to dicipher random words and I quickly pivoted. 
-
-### **STEPS**:
-- Go to your terminal, highlight the weird text (*gibberish*) which you found in the image, and copy it.
-- Go to CyberChef and paste the text inside the **Input** box located in the top right corner .
-
-Since the text look like “letters and numbers” and had symbols such as “$/^}_:” I started with the most common operations:
-
-- Dragged `From Base64` from the left sidebar into the "Recipe" column. That didn’t work.
-- Dragged `Strings` since it’s showing micro tiny letters in red with symbols such as **@$!…** and Strings helps to remove the red symbols.
-
-<p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/2-jiggles-gibberish numberletters-CyberChef.png" alt="CyberChef graphic" width="800">
-</p>
-
-The `Flag` appeared :-)
-
-<p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/2-jiggles-gibberish numberletters-CyberChef.png" alt="CyberChef graphic" width="800">
 </p>
 
 ---
