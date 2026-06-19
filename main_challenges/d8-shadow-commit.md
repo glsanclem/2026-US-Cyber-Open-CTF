@@ -2,52 +2,46 @@
 layout: default
 title: "Your Page Title Here"
 hero:
-  heading: "2025 Target + WiCyS Cyber Defense Challenge CTF Write-Ups"
-  text: "This page showcases my participation in the 2025 Target Cyber Defense CTF Challenge hosted by WiCyS, which ran from July 1 through August 14, 2025."
+  heading: "US Cyber Open Challenge 2026 CTF Technical Writeup"
+  text: "Selected CTF challenges, methodologies, and technical analysis from the Season VI: 2026 US Cyber Open, June 5 to 14, 2026."
 ---
 
 
-# D8. Shadow Commit
+# Noncesence
 
 **Points:** 100  
-**Level:** Not as Difficult  
-**Category:** Forensics Investigation (Git)
+**Difficulty:** Beginner
+**Category:** Crypto
 
 ---
 
 ## Description
-We've identified the piece of software that's responsible for the exfiltration, and it's one of Personalyz.io's internally developed apps. We reach out to the developer of the software and they report back that their repository was compromised. Looks like all we received was a .git directory—no source files, no README, just the version history. Somewhere in the commit log, a change was made that allowed the threat actor to use it to exfiltrate data.
+This encryption service will encrypt any plaintext you send it. It also encrypted our flag — can you recover it?
+
+`nc challenge.ctf.uscybergames.com 55705`
 
 ---
 
 ## Objective
--	Find the commit hash where the malicious change was introduced. 
--	Obtain the malicious IPv4 address.
+The objective was to recover a hidden flag encrypted by a remote server. The server provided an "encryption service" where users could send any plaintext and receive the encrypted version in return. The challenge provided the source code `server.py` to help analyze how the encryption was being handled.
 
 ---
 
 ## Flag Format
-###.###.###.###
+The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 
 ---
 
 ## Tools Used
-git
+- TextEdit
+- Netcat (nc)
+- socat
+- CyberChef
 
 ---
 
 ## Methodology
-The zip file contained a .git directory with no actual source code, just the commit logs and object history. I unzipped the file via Terminal, opened “Terminal” and typed this command:
 
-```bash
-CopyEdit
-cd ~/Desktop
-unzip shadow.zip -d shadow_repo
-```  
-
-I found a list of commits which appeared to be 102 files. I needed to find the commit that introduced the malicious IPv4 address 251.91.13.37 (from the previous challenge). It wasn’t hard to find the smoking gun because the commit hash listed a bunch of numbers with lowercase letters (40-character hash) that uniquely identifies the Git commit. 
-
-Now, I was looking for something out of the ordinary, a mix of upper-case letters with symbols and numbers. Upon skimming through the document, the following appeared:
 
 <p align="center">
   <img src="/2025_wicys_target_ctf/assets/images/d8-commit-list.png" alt="d8-commit-list graphic" width="400">
