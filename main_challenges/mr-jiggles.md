@@ -97,11 +97,6 @@ However, let's look beyond the cat owner's perspective, and flip the script. Sup
 Adversaries may use steganography techniques in order to prevent the detection of hidden information. Steganographic techniques can be used to hide data in digital media such as images, audio tracks, video clips, or text files. For example, hackers can hide ##PowerShell## commands in an image file (.png) and execute the code on a victim's system, which can gather intel from the victim's machine and communicate back to the adversary.
 
 **Obfuscated Files or Information: Steganography**
-*ID*:         T1027.003
-*Tactic*:     Stealth
-*Mitigation*: This type of attack can't be easily mitigated since it's an abuse of system features. 
-*Detection Strategy*: ID-DET0119, Detection Strategy for Steganographic Abuse in File & Script Execution
-
 
 | Field | Details |
 |--------|---------|
