@@ -26,10 +26,7 @@ Your task is to identify the OS process, user, and software that is performing t
 ---
 
 ## Flag Format
-To build the flag, you'll need: 
-1. The username on the backup server that is running the exfil process (USER).
-2. Name of the executable file that actually created the exfil process (FILE).
-3. Process ID (PID) of the process performing the exfiltration. The format of the flag will be USER_FILE_PID.
+SVIUSCG{This_is_a_Flag}
 
 ---
 
