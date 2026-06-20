@@ -2,8 +2,8 @@
 layout: default
 title: "Your Page Title Here"
 hero:
-  heading: "2025 Target + WiCyS Cyber Defense Challenge CTF Write-Ups"
-  text: "This page showcases my participation in the 2025 Target Cyber Defense CTF Challenge hosted by WiCyS, which ran from July 1 through August 14, 2025."
+  heading: "US Cyber Open Challenge 2026 CTF Technical Writeup"
+  text: "Selected CTF challenges, methodologies, and technical analysis from the Season VI: 2026 US Cyber Open, June 5 to 14, 2026."
 ---
 
 
