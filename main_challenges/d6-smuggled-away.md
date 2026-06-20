@@ -26,7 +26,7 @@ Now that we see where things are being exfiltrated, provide the credit card's ex
 ---
 
 ## Flag Format
-The flag is in the format: <CreditCardExpiration>_<CVVofCreditCard>_<email>
+The flag should be in the format: SVIUSCG{This_is_a_Flag}
 
 ---
 
