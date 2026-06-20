@@ -64,9 +64,15 @@ The string of prefixes revealed lowercase letters and digits which was copied an
 ---
 
 ## MITRE ATT&CK
-<span style="color:yellow; font-style:italic;">(Suggested)</span>  
+<span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
 
-This challenge was about uncovering the *what* (actual stolen data). In this case, it shifts the weight more toward:
--	**Exfiltration Over Unencrypted Non-C2 Protocol (T1048.003):** Here, the attacker smuggled out sensitive information by hiding it inside DNS queries, a protocol not normally used for bulk data transfer.
--	**Data Encoding (T1132):** In this case, the stolen information was encoded and compressed (Base32, GZIP) to make it harder to spot in network traffic.
--	**Exfiltration Over Alternative Protocol (T1048):** Beyond normal channels like HTTP or email, the attacker used DNS as a sneaky way to transfer stolen customer data.
+This challenge required reconstructing fragmented data and decoding an XOR protected payload to recover the hidden information.
+
+| Field | Details |
+|:--------|:---------|
+| ID | T1140 |
+| Tactic | Defense Evasion |
+| Mitigation | Review scripts and encoded files for hidden or obfuscated content. Analyze suspicious files inn controlled environment before execution. |
+| Detection Strategy | Monitor for tools, scripts, or processes that decode, deobfuscate, or reconstruct encoded information from files. |
+
+Source: https://attack.mitre.org
