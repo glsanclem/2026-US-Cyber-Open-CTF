@@ -26,7 +26,7 @@ This challenge is to identify which machine is sending the stolen data out of yo
 ---
 
 ## Flag Format
-The flag should be in the format: [compromised-hostname]_[C2-IP]
+The flag should be in the format: SVIUSCG{This_is_a_Flag}
 
 ---
 
