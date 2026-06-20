@@ -7,21 +7,25 @@ hero:
 ---
 
 
-# D5. Ahoy, PCAP’n!
+# Souvenirs
 
-**Points:** 300  
-**Level:** Difficult  
-**Category:** Network Traffic Analysis, Network Forensics
+**Points:** 132
+**Level:** Easy 
+**Category:** Forensics, Steganography
 
 ---
 
 ## Description
-In the vast ocean of network traffic monitored by the company's Network Security team, you need to find out: the compromised machine's name and the Command-and-Control (C2) IP address of the threat actor (where they are sending the data to). The Network Security team has packet captures ("PCAPs") of the company's network traffic around the time of the alert, but due to a tight Information Technology (IT) budget and a lack of resources, it's limited to a small window of time.
+Every traveler comes home with a bag full of souvenirs — some you put on a shelf, some you tuck quietly inside other things so the airport doesn't ask questions.
+
+This postcard came back from a long trip around the world. Open it carefully. Some travelers leave more behind a picture than you'd think.
+
+This is an `Around The World` challenge submitted by `Women in CyberSecurity Middle East (WiCSME)`.
 
 ---
 
 ## Objective
-This challenge is to identify which machine is sending the stolen data out of your environment and where it went, by looking at how protocols can be used and abused for malicious intent. From the provided PCAP file, you need to identify 2 important pieces of information: the name of our compromised machine sending our super-secret data and the Command-and-Control (C2) IP address the data is being sent.
+The objective was to find a hidden file (ZIP archive) that was secretly appended to the end of an image file and then extract the text files inside it to find the flag.
 
 ---
 
@@ -31,7 +35,7 @@ The flag should be in the format: SVIUSCG{This_is_a_Flag}
 ---
 
 ## Tools Used
-WireShark
+MacOS Terminal
 
 ---
 
