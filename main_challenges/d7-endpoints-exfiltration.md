@@ -26,7 +26,7 @@ Your task is to identify the OS process, user, and software that is performing t
 ---
 
 ## Flag Format
-SVIUSCG{This_is_a_Flag}
+The flag should be in the format: SVIUSCG{This_is_a_Flag}
 
 ---
 
