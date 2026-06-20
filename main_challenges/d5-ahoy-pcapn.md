@@ -78,6 +78,15 @@ To get the first part of the flag, I needed to know the hostname of the source m
 ---
 
 ## MITRE ATT&CK
-<span style="color:yellow; font-style:italic;">(Suggested)</span>
--	**Command and Control: Application Layer Protocol (T1071.004 – DNS):** Here, the attacker used DNS queries and responses to establish communication with their external server. Instead of obvious channels like HTTP or HTTPS, they tunneled activity through DNS. The threat actor attempted to take command and control of traffic (DNS) that is usually trusted and rarely blocked.
--	**Exfiltration Over C2 Channel (T1041):** In this case, the compromised host sent sensitive data through the same channel used for command and control, specifically leveraging DNS requests and responses to sneak data outside the network.
+<span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
+
+This challenge required reconstructing fragmented data and decoding an XOR protected payload to recover the hidden information.
+
+| Field | Details |
+|:--------|:---------|
+| ID | T1140 |
+| Tactic | Defense Evasion |
+| Mitigation | Review scripts and encoded files for hidden or obfuscated content. Analyze suspicious files inn controlled environment before execution. |
+| Detection Strategy | Monitor for tools, scripts, or processes that decode, deobfuscate, or reconstruct encoded information from files. |
+
+Source: https://attack.mitre.org
