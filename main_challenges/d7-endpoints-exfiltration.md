@@ -73,8 +73,15 @@ This tells me, the sudo line deletes the authentic “/usr/bin/jot” and ln -s 
 ---
 
 ## MITRE ATT&CK
-<span style="color:yellow; font-style:italic;">(Suggested)</span>
--	**Masquerading (T1036):** The attacker replaced the legitimate /usr/bin/jot binary with a malicious program, making it appear as a normal system utility.
--	**Command and Scripting Interpreter (T1059):** Evidence in bash-history.txt showed the attacker leveraging shell commands to manipulate files and establish execution.
--	**Indicator Removal or Modification (T1070):** The `sudo rm /usr/bin/jot` step was used to remove the authentic binary, erasing traces of normal operation.
+<span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
 
+This challenge required reconstructing fragmented data and decoding an XOR protected payload to recover the hidden information.
+
+| Field | Details |
+|:--------|:---------|
+| ID | T1140 |
+| Tactic | Defense Evasion |
+| Mitigation | Review scripts and encoded files for hidden or obfuscated content. Analyze suspicious files inn controlled environment before execution. |
+| Detection Strategy | Monitor for tools, scripts, or processes that decode, deobfuscate, or reconstruct encoded information from files. |
+
+Source: https://attack.mitre.org
