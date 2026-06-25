@@ -16,9 +16,7 @@ hero:
 ---
 
 ## Description
-This encryption service will encrypt any plaintext you send it. It also encrypted our flag — can you recover it?
-
-`nc challenge.ctf.uscybergames.com 55705`
+This encryption service will encrypt any plaintext you send it. It also encrypted our flag — can you recover it? Attachment: `nc challenge.ctf.uscybergames.com 55705`
 
 ---
 
@@ -35,7 +33,7 @@ The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 ## Tools Used
 - TextEdit
 - Netcat (nc)
-- socat
+- Socat
 - CyberChef
 
 ---
@@ -50,9 +48,9 @@ I opened the server.py file with TextEdit to see how the challenge worked behind
   <img src="/2025_wicys_target_ctf/assets/images/4-noncensense-server.png" alt="server graphic" width="400">
 </p>
 
-From my understanding, this mode generates a  keystream (a stream of random bytes) using a `KEY` and a `NONCE`, and then combines that keystream with the plaintext using **XOR**.
+From my understanding, this mode generates a keystream (stream of random bytes) using a `KEY` and a `NONCE`, and then combines that keystream with the plaintext using **XOR**.
 
-As I continued reading through the code, I noticed that both the `KEY` and `NONCE` were generated only once when the server started:
+As I continued to read through the code, I noticed that both the `KEY` and `NONCE` were generated only once when the server started:
 
 ```
 KEY = os.urandom(16)
