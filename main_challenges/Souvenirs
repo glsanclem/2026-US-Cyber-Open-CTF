@@ -94,13 +94,14 @@ The flag was finally revealed in the last document:
 ## MITRE ATT&CK
 <span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
 
-This challenge required reconstructing fragmented data and decoding an XOR protected payload to recover the hidden information.
+If we think about it from the attacker's perspective, the idea is to hide information inside of another file to prevent detection. Here, the JPEG contained additional data that was not visible when the image was opened normally.
 
 | Field | Details |
 |:--------|:---------|
-| ID | T1140 |
+| ID | T1027 |
 | Tactic | Defense Evasion |
-| Mitigation | Review scripts and encoded files for hidden or obfuscated content. Analyze suspicious files inn controlled environment before execution. |
-| Detection Strategy | Monitor for tools, scripts, or processes that decode, deobfuscate, or reconstruct encoded information from files. |
+| Technique | Obfuscated Files or Information |
+| Mitigation | Inspect files for embedded or hidden content using forensic and file analysis tools. Validate file formats and investigate files whose contents do not match their expected structure. |
+| Detection Strategy | Monitor for files containing unxpected embedded data, appended archives, or abnormal file structures. Use file integrity checks and forensic analysis tools to identify hidden content. |
 
 Source: https://attack.mitre.org
