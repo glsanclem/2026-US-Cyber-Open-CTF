@@ -40,16 +40,13 @@ MacOS Terminal
 ---
 
 ## Methodology
-I installed the network analysis packet tool, WireShark, downloaded the PCAP file, and uploaded the PCAP file (pirates.pcap) onto WireShark. Many rows were shown to represent messages between systems coming from the company network and outside to/from the Internet. I noticed there were a few protocols  listed under the ‘Protocol’ column such as Address Resolution Protocol (ARP), Transmission Control Protocol (TCP), Internet Control Message Protocol (ICMP), and Domain Name System (DNS). 
+When I read from the description, “*some you tuck quietly inside other things…and some leave more behind a picture than you’d think,*” I felt that there was some hidden data behind the image or file structure.
 
-I narrowed down the list to the most relevant protocol for this challenge (DNS) because it is used to resolve hostnames to IP addresses and to know what address I need to conduct a task, such as to send the document.
+{Insert: Souvenirs}
 
-Inside the packet, I conducted the following steps:
--	Right-clicked on any of the DNS protocol field line
--	Clicked ‘Apply as Filter,’ 
--	Clicked on ‘Selected.’ 
+Sometimes a `.jpg` has either a `.zip` or `.txt` attached to it and that file might have information which is valuable to solving the challenge.
 
-This gave me all of the field lines with only DNS Protocol with a total of 3106 packets and each contained a query and response. On the right-hand side there is an Info column, and this is where I was able to have a quick view of queries and responses. If I highlighted a row and looked to the bottom left box, Wireshark provided more in-depth detail of the request.
+I opened a terminal on the computer, typed a strings code, and hit enter:
 
 <p align="center">
   <img src="/2025_wicys_target_ctf/assets/images/d5-dns-protocol.png" alt="CTF Scenario graphic" width="400">
