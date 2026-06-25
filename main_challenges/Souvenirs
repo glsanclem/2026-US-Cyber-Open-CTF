@@ -42,39 +42,52 @@ MacOS Terminal
 ## Methodology
 When I read from the description, “*some you tuck quietly inside other things…and some leave more behind a picture than you’d think,*” I felt that there was some hidden data behind the image or file structure.
 
-{Insert: Souvenirs}
+<p align="center">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-sunset.png" alt="Sunset graphic" width="400">
+</p>
 
 Sometimes a `.jpg` has either a `.zip` or `.txt` attached to it and that file might have information which is valuable to solving the challenge.
 
 I opened a terminal on the computer, typed a strings code, and hit enter:
 
+`strings image {attached image file} | tail -n 20`
+
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/d5-dns-protocol.png" alt="CTF Scenario graphic" width="400">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-strings-lines-in-terminal.png" alt="Sunset graphic" width="400">
 </p>
 
-Since there were 3106 lines, I tried to use the ‘Find’ button to see if the client’s name, *Personalyz.io*, was listed. I conducted the following steps:
--	Clicked on ‘Edit’
--	Clicked on find packet
--	Under the drop down, I chose ‘String’ and typed in the name
+I saw a bunch of letters and symbols, but what caught my attention were four text files at the bottom titled, “marrakech, tokyo, oman, and iceland.” 
 
-Unfortunately, nothing came up when I conducted that search. I then scrolled up and down to see if there was anything out of the ordinary. I noticed that most source and destination columns started with a source string: 10.87.182… or 10.75.34... to destination string: “10.87.182…” or “10.75.34...”.  
+To unzip those file, I ran this command in the terminal:
 
-I noticed something strange, a few of the source began with “251.91.13.37” to destination “10.75.34.13” and vice versa. I focused on those queries which were only 33 and easier to review to see if I find something strange that can answer the challenge. It looked like the “10…” was the internal and “251…” led to external information on the Internet. I found the exfiltration point and the second part of the flag: 25.91.13.37 (destination).
+`unzip /Users/Desktop/souvenirs.jpg`
+
+This created a folder on the desktop with text files. I opened each one and read through the messages for any clue or the flag.
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/d5-exfiltration-point.png" alt="CTF Scenario graphic" width="800">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-tokyo-txt-file.png" alt="Tokyo graphic" width="800">
 </p>
 
-To get the first part of the flag, I needed to know the hostname of the source machine. I continued to review the DNS records and scanned the list of DNS messages for a response packet. I made a note of the source next to the destination IP obtained from the second part of the flag and filtered by that source number. In other words, I changed the IP address to the one for the xfill server (dns.a == 10.75.34.13) and pressed ENTER which revealed the response to the lookup for the hostname of the machine exfiltrating data. I found the first part of the flag (“bvlik”).
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/d5-query-response.png" alt="CTF Scenario graphic" width="800">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirse-marrakech-tx-file.png" alt="marrakech graphic" width="800">
+</p>
+
+
+<p align="center">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirse-iceland-tx-file.png" alt="Iceland graphic" width="800">
+</p>
+
+The flag was finally revealed in the last document:
+
+<p align="center">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirse-oman-tx-file.png" alt="Oman graphic" width="800">
 </p>
 
 ---
 
 ## Flag
-`bvlik_251.91.13.37`  
+`SVIUSCG{p0stc4rds_h1dd3n_p4st_th3_FFD9_h0r1z0n}`  
 
 ---
 
