@@ -53,12 +53,12 @@ I opened a terminal on the computer, typed a strings code, and hit enter:
 `strings image {attached image file} | tail -n 20`
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-strings-lines-in-terminal.png" alt="Sunset graphic" width="400">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-strings-lines-in-terminal.png" alt="Terminal lines graphic" width="400">
 </p>
 
-I saw a bunch of letters and symbols, but what caught my attention were four text files at the bottom titled, “marrakech, tokyo, oman, and iceland.” 
+The file listed a bunch of letters and symbols, but what caught my attention were four text files at the bottom titled, “marrakech, tokyo, oman, and iceland.” 
 
-To unzip those file, I ran this command in the terminal:
+To unzip those file, I ran the following command in the terminal:
 
 `unzip /Users/Desktop/souvenirs.jpg`
 
@@ -70,18 +70,18 @@ This created a folder on the desktop with text files. I opened each one and read
 
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirse-marrakech-tx-file.png" alt="marrakech graphic" width="800">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-marrakech-tx-file.png" alt="Marrakech graphic" width="800">
 </p>
 
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirse-iceland-tx-file.png" alt="Iceland graphic" width="800">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-iceland-tx-file.png" alt="Iceland graphic" width="800">
 </p>
 
 The flag was finally revealed in the last document:
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirse-oman-tx-file.png" alt="Oman graphic" width="800">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-oman-tx-file.png" alt="Oman graphic" width="800">
 </p>
 
 ---
