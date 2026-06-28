@@ -22,6 +22,7 @@ Blue Mountain Geotechnical is a Denver-based soils and rock-mechanics consultanc
 
 ## Objective
 The Cryptolocker (ransomware) corrupted files, which means the file structure is broken. The objective is to recover the site dispatch before a client meeting. 
+
 ---
 
 ## Flag Format
