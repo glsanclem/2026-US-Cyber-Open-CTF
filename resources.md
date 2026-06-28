@@ -9,7 +9,7 @@ hero:
 
 ## RESOURCES   
 
-Here’s a collection of materials, notes, and references I used while working on the challenges.  
+Here’s a collection of materials, notes, and references used during the challenges.  
 
 - **[MITRE ATT&CK](https://attack.mitre.org/):** An accessible knowledge base of adversary tactics and techniques based on real-world observations.  
 - **[OpenSearch Dashboards](https://opensearch.org/):** A fully open-source search and analytics suite that enables people to ingest, secure, search, view, and analyze data.  
