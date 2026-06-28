@@ -17,6 +17,4 @@ Here’s a collection of materials, notes, and references used during the challe
 - **[CyberChef](https://gchq.github.io/CyberChef/):** An open-source web-based tool that allows users to conduct data manipulation and network data analysis.  
 - **[FBI Guidance on Ransomware](https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/ransomware):** FBI guidance and recommendations on the prevention and response to ransomware attacks.  
 - **[Social Engineering Tactics for Incident Response](https://www.social-engineer.org/framework/influencing-others/influence-tactics/):** Informational site on social engineering.  
-- **[Negotiation Skills](https://www.pon.harvard.edu/category/daily/negotiation-skills-daily/?cid=13):** Informational site from Harvard on the topic of negotiation.  
-- **[The Psychology of Influence and Persuasion]( https://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/0688128165):** A book on persuasion and how to become a skilled persuader.  
 - **[Wireshark](https://www.wireshark.org/):** A free open-source network protocol analyzer that inspects network traffic allowing users to analyze data at the packet level. 
