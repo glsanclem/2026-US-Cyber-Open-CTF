@@ -17,6 +17,7 @@ hero:
 
 ## Description
 Lakeshore Threat Lab confirmed an attacker pivoted from `FIN-WS-07` to `NAS-MARITIME-01`, the Wabash Marine NAS that hosts the internal Lakefront Fleet Manager web app on port 8088. Imani Boateng captured a short east-west slice of that pivot. Her capture is attached.
+
 ---
 
 ## Objective
@@ -35,13 +36,13 @@ Wireshark, CyberChef
 ---
 
 ## Methodology
-Saved .pcap file on desktop, and opened it with Wireshark. 
+Saved `.pcap` file on desktop, and opened it with Wireshark. 
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/7-manifest-image-one.png" alt="Image one graphic" width="400">
 </p>
 
-Reviewed the platform to see if anything jumped out at me. There was something about the info entry: HTTP/1.1 200 OK (text/plain) that looked different from every other entry. Why did it say “OK”? Was that communication between two sources (hacker trying to get information)?
+I reviewed the platform to see if anything jumped out at me and noticed in the Info column the entry `HTTP/1.1 200 OK (text/plain)` which looked different from the other entries. _Why did the entry say “OK”_? _Could it be some sort of communication between two sources (i.e. a hacker trying to get information)_?
 
 I clicked on the entry and in the bottom left panel, I noticed four Line-based text data. 
 
@@ -52,35 +53,33 @@ crew_manifests_q4_2025.csvln
 billet summarv 2026. ison\n
 ```
 
-This made me question, why was Q3 not included? Was that something the hacker was trying to get? I need to investigate and find the HTTP GET or HTTP POST request that triggered that text.
+More questions came to mind: _Why was Q3 not included_? _Was that information which the hacker was trying to obtain?_ 
 
-I looked back again at all the entries in the “Info” column for something close to those text exchange. I found a GET entry that specifically mentioned: “GET /api/v1/personnel/crew_manifests_q2_2026.csv HTTP/1.1”
+I needed to investigate and find the HTTP GET or HTTP POST request that triggered that text and the questions in my mind. I looked back again at all the entries in the “Info” column for something close to those text exchange. I found a GET entry that specifically mentioned: `GET /api/v1/personnel/crew_manifests_q2_2026.csv HTTP/1.1`
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/7-manifest-image-two.png" alt="Image two graphic" width="400">
 </p>
 
-I found the exact moment the theft happened! 
+I found the exact moment the theft happened! This GET request was when the attacker asked the server to “Give them the file containing the crew manifests for the second quarter of 2026.”
 
-This GET request was when the attacker asked the server to “Give them the file containing the crew manifests for the second quarter of 2026.”
-
-Now, I needed to see what the server gave them. I right clicked the entry > Follow > HTTP Stream.
-
-I was shocked to find a long list of personnel crew names, id, rank, billet, start and dates.
+Now, I needed to see what the server gave them. I performed the following: right clicked the Entry > Follow > HTTP Stream. I was shocked to find a long list of personal information which included personnel crew names, id, rank, billet, start and dates.
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/7-manifest-image-three.png" alt="Image three graphic" width="400">
 </p>
 
-But one particular name stood out to me, “WAB-2207,BR9X2E,Jonas,Tolliver,Master,Charter Liaison,2026-02-14,U1ZJVVNDR3t3YWJhc2hfZmlud3NfcGl2b3RfbmFzX21hcml0aW1lXzAxfQ==”
+One particular name, Tolliver Jonas, stood out to me: `WAB-2207,BR9X2E,Jonas,Tolliver,Master,Charter Liaison,2026-02-14,U1ZJVVNDR3t3YWJhc2hfZmlud3NfcGl2b3RfbmFzX21hcml0aW1lXzAxfQ==`
 
-Why did Master Jonas Tolliver have a long atring of letters and numbers next to it? It was the only entry that looked out of place. That was it!! I quickly copied those fragments and opened CyberChef. Plugged in the data into the Input box. Added operations Base64, Hex, and Magic. In the output box, the flag appeared:
+_Why did Tolliver Jonas have a long string of letters and numbers next to it?_ It was the only entry that looked out of place. That was it!! I quickly copied those fragments and opened CyberChef, plugged the data into the Input box, and added the operations Base64, Hex, and Magic. 
+
+There we have it! The output box revealed the flag:
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/7-manifest-image-four-FLAG.png" alt="Image four graphic" width="400">
 </p>
 
-In this challenge, I performed a full-scale forensic investigation: identified the attacker’s movement, isolated the malicious network traffic, extracted the stolen data from a packet stream, and used CyberChef to decode the final payload. 
+In summary, for this challenge, I performed a full-scale forensic investigation which included identifying the attacker’s movement, isolating the malicious network traffic, extracting the stolen data from a packet stream, and using CyberChef to decode the final payload. 
 
 ---
 
