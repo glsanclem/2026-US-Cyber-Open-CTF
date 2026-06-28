@@ -61,7 +61,7 @@ I needed to investigate and find the HTTP GET or HTTP POST request that triggere
   <img src="/2026-US-Cyber-Open-CTF/assets/images/7-manifest-image-two.png" alt="Image two graphic" width="400">
 </p>
 
-I found the exact moment the theft happened! This GET request was when the attacker asked the server to “Give them the file containing the crew manifests for the second quarter of 2026.”
+I found the exact moment the theft happened! I believe this GET request was when the attacker asked the server to give them the file containing the crew manifests for the second quarter of 2026.
 
 Now, I needed to see what the server gave them. I performed the following: right clicked the Entry > Follow > HTTP Stream. I was shocked to find a long list of personal information which included personnel crew names, id, rank, billet, start and dates.
 
