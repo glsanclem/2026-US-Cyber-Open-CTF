@@ -20,24 +20,20 @@ Mr. Jiggles my pet cat ran away and when I put up flyers this was the photo I us
 
 <img src="/2026-US-Cyber-Open-CTF/assets/images/2-jiggles-cat.jpg" alt="Mr. Jiggles" style="float: right; margin-left: 15px; width: 300px;" />
 
----
 
 ## Objective
 The objective of the challenge is to extract data about Mr. Jiggles and possibly learn more about his whereabouts.
 
----
 
 ## Flag Format
 The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 
----
 
 ## Tools Used
 Terminal, Binwalk, and CyberChef
 
----
 
-## Methodology + Solution
+## Methodology
 
 Open the computer `Terminal`, type `cd` followed by a space, drag and drop the folder where the image is located into the terminal window. It looks something like this:
 
@@ -59,9 +55,11 @@ I then installed `binwalk` in the terminal since the data wasn't written in plai
 
 **Note to self and the viewers**: Remember to install any necessary software prior to the challenges. But in my case my laptop is an older model, I didn’t know which program were truly necessary.
 
-Next, I remembered from a previous CTF challenge, **CyberChef**, which helps to dicipher random words and I quickly pivoted. 
+Next, I remembered from a previous CTF challenge, **CyberChef**, which helps decode or decipher encoded text and I quickly pivoted. 
 
-### **STEPS**:
+**STEPS**:
+
+At this point, I started testing a few common decoding techniques to see if one of them would reveal something useful.
 - Go to your terminal, highlight the weird text (*gibberish*) which you found in the image, and copy it.
 - Go to CyberChef and paste the text inside the **Input** box located in the top right corner .
 
@@ -80,19 +78,17 @@ The `Flag` appeared :-)
   <img src="/2026-US-Cyber-Open-CTF/assets/images/2-jiggles-gibberish numberletters-CyberChef.png" alt="CyberChef graphic" width="800">
 </p>
 
----
 
 ## Flag
 `SVIBRG{Y0u_F0unD_Mr_J1GgL3$!}`
 
----
 
 ## MITRE ATT&CK
 <span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
 
 In this challenge, the cat owner wanted to know more information of its cat from the photo they used in the flyer. Here, it's the victim and not the adversary seeking intelligence. MITRE ATT&CK is from the attacker's perspective, not the defender's or analyst's perspective. Thus, I believe there is no direct MITRE ATT&CK mapping identified in this challenge.
 
-However, let's look beyond the cat owner's perspective, and flip the script. Suppose someone else gave the owner the photo with malicious intentions which creates a code on the victims system. As soon as the cat owner downloads the photo to create the flyers, they get a malware on their computer.
+However, let's flip the perspective for a moment, and flip the script. Suppose someone else gave the owner the photo with malicious intentions which creates a code on the victims system. As soon as the cat owner downloads the photo to create the flyers, they get a malware on their computer.
 
 Adversaries may use steganography techniques in order to prevent the detection of hidden information. Steganographic techniques can be used to hide data in digital media such as images, audio tracks, video clips, or text files. For example, hackers can hide **PowerShell** commands in an image file (.png) and execute the code on a victim's system, which can gather intel from the victim's machine and communicate back to the adversary.
 
