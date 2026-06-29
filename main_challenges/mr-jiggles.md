@@ -39,7 +39,7 @@ Terminal, Binwalk, and CyberChef
 
 ## Methodology + Solution
 
-Open the computer `Terminal`, type `cd` followed by a space, drag and drop the folder where the image is locatd into the terminal window. It looks something like this:
+Open the computer `Terminal`, type `cd` followed by a space, drag and drop the folder where the image is located into the terminal window. It looks something like this:
 
 `cd /Users/yourname/Desktop/my_images`
 
@@ -52,7 +52,7 @@ Replace `your_image_name.jpg` with the actual name of your file.
 In the terminal, I noticed a bunch of gibberish appeared (letters and numbers): 
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/2-jiggles-gibberish numberletters.png" alt="terminal gibberish graphic" width="800">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/2-jiggles-gibberish numberletters.png" alt="terminal gibberish graphic" width="700" height="900">
 </p>
 
 I then installed `binwalk` in the terminal since the data wasn't written in plain text. However, binwalk took forever to install. 
@@ -67,7 +67,7 @@ Next, I remembered from a previous CTF challenge, **CyberChef**, which helps to 
 
 Since the text look like “letters and numbers” and had symbols such as “$/^}_:” I started with the most common operations:
 
-- Dragged `From Base64` from the left sidebar into the "Recipe" column. That didn’t work.
+- Dragged `From Base64` from the left sidebar into the "Recipe" column, but that didn’t work.
 - Dragged `Strings` since it’s showing micro tiny letters in red with symbols such as **@$!…** and Strings helps to remove the red symbols.
 
 <p align="center">
@@ -94,7 +94,7 @@ In this challenge, the cat owner wanted to know more information of its cat from
 
 However, let's look beyond the cat owner's perspective, and flip the script. Suppose someone else gave the owner the photo with malicious intentions which creates a code on the victims system. As soon as the cat owner downloads the photo to create the flyers, they get a malware on their computer.
 
-Adversaries may use steganography techniques in order to prevent the detection of hidden information. Steganographic techniques can be used to hide data in digital media such as images, audio tracks, video clips, or text files. For example, hackers can hide ##PowerShell## commands in an image file (.png) and execute the code on a victim's system, which can gather intel from the victim's machine and communicate back to the adversary.
+Adversaries may use steganography techniques in order to prevent the detection of hidden information. Steganographic techniques can be used to hide data in digital media such as images, audio tracks, video clips, or text files. For example, hackers can hide **PowerShell** commands in an image file (.png) and execute the code on a victim's system, which can gather intel from the victim's machine and communicate back to the adversary.
 
 **Obfuscated Files or Information: Steganography**
 
