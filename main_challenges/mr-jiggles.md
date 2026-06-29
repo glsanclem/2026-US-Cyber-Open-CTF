@@ -83,7 +83,7 @@ Finally, the `Flag` appeared :-)
 
 
 ## MITRE ATT&CK
-<span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
+<span style="color:yellow; font-style:italic;">_What was the Attacker Doing? | Reflections | Suggestions_</span>
 
 In this challenge, the cat owner wanted to know more information of its cat from the photo they used in the flyer. Here, it's the victim and not the adversary seeking intelligence. MITRE ATT&CK is from the attacker's perspective, not the defender's or analyst's perspective. Thus, I believe there is no direct MITRE ATT&CK mapping identified in this challenge.
 
