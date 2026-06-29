@@ -9,31 +9,26 @@ hero:
 
 # Broken Envelope
 
-**Points:** 162
-**Level:** Medium 
-**Category:** Forensics, Data Recovery
+| Points | Difficulty | Category |
+| :----- | :--------- | :------- |
+| 162 | Medium | Forensics, Data Recovery |
 
----
 
 ## Description
 Blue Mountain Geotechnical is a Denver-based soils and rock-mechanics consultancy. A cryptolocker affiliate passed through the firm's file shares and partly corrupted several project archives before IT lead Bela Srivastava pulled the plug. Project engineer Adalyn Proteau needs the site dispatch read before Monday's client meeting.
 
----
 
 ## Objective
 The Cryptolocker (ransomware) corrupted files, which means the file structure is broken. The objective is to recover the site dispatch before a client meeting. 
 
----
 
 ## Flag Format
 The flag should be in the format: SVIUSCG{This_is_a_Flag}
 
----
 
 ## Tools Used
 CyberChef
 
----
 
 ## Methodology
 I double clicked the zip file to unzip and found two files (dispatch file and readme file). Inside the unzipped folder, I clicked on the first file, `project_dispatch.txt` to review and analyze the document. I noticed the following string:
@@ -56,17 +51,15 @@ As soon as I addeded the operation **Base64**, the flag appeared in the Output b
   <img src="/2026-US-Cyber-Open-CTF/assets/images/6-broken-envelope-cyberchef-flag.png" alt="CyberChef flag reveal graphic" width="400">
 </p>
 
----
 
 ## Flag
 `SVIUSCG{bluemountain_zip_eocd_rebuild}`
 
----
 
 ## MITRE ATT&CK
-<span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
+<span style="color:yellow; font-style:italic;">_Reflections | Suggestions | What was the Attacker Doing?_</span>
 
-Based on the challenge description, "A cryptolocker affiliate passed through the firm's file shares and partly corrupted several project archives...", the potential attacker behavior is ransomware impacting files and this MITRE ATT&CK came to mind:
+Based on the challenge description, "A cryptolocker affiliate passed through the firm's file shares and partly corrupted several project archives...", the attacker appears to have deployed ransomeware that impacted the firm's files. The following MITRE ATT&CK technique seemed most relevant:
 
 | Field | Details |
 |:--------|:---------|
