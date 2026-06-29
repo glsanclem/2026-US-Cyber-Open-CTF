@@ -65,7 +65,7 @@ Click on any box below to view the challenge.
   </div>
 
   <div class="challenge-box">
-    <h3><a href="main_challenges/broken-envelope">Brokn Envelope</a></h3>
+    <h3><a href="main_challenges/broken-envelope">Broken Envelope</a></h3>
     <p><strong>Points:</strong> 162</p>
     <p><strong>Category:</strong> Forensics</p>
     <p><strong>Difficulty:</strong> Medium</p>
