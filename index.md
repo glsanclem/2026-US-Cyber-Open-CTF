@@ -17,6 +17,7 @@ The 2026 US Cyber Open was a Capture the Flag (CTF)-themed event. This writeup s
 I completed a total of six challenges and yes, even during the week of the NBA Finals (go Knicks!) and the FIFA World Cup. While I didn't complete all the challenges, I pat myself on the back for putting myself out there and competing with exceptional talents from around the world. It's a win for me...goooooooooal!!!! ⚽
 </p>
 
+
 ## STRUCTURE
   
 The event consisted of participating in two game rooms: Beginner's and Competitive CTF. The Beginner's Game Room is an entry-level CTF for those participants that wanted to start slow and ease into the competition, newbies, semi-newbies,and even experts who wanted to get their feet wet and gain motivation. It was basically the warm-up round. The Competitive CTF put us to the test and provided challenges that ranged from easy and intermediate to advance. 
