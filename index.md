@@ -6,6 +6,8 @@ hero:
   text: "Selected CTF challenges, methodologies, and technical analysis from the Season VI: 2026 US Cyber Open, June 5 to 14, 2026."
 ---
 
+<div style="clear: both;"></div>
+
 ## INTRO
 
 <img src="/2026-US-Cyber-Open-CTF/assets/images/1-home-US-Cyber-Open-Badge.png" alt="Cyber Open Badge" style="float: right; margin-left: 15px; width: 300px;" />
@@ -14,7 +16,6 @@ The 2026 US Cyber Open was a Capture the Flag (CTF)-themed event. This writeup s
 
 I completed a total of six challenges and yes, even during the week of the NBA Finals (go Knicks!) and the FIFA World Cup. While I didn't complete all the challenges, I pat myself on the back for putting myself out there and competing with exceptional talents from around the world. It's a win for me...goooooooooal!!!! ⚽
 
-<div style="clear: both;"></div>
 
 ## STRUCTURE
 
