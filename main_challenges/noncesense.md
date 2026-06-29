@@ -15,7 +15,8 @@ hero:
 
 
 ## Description
-This encryption service will encrypt any plaintext you send it. It also encrypted our flag — can you recover it? Attachment: `nc challenge.ctf.uscybergames.com 55705`
+This encryption service will encrypt any plaintext you send it. It also encrypted our flag — can you recover it? 
+- Attachment: `nc challenge.ctf.uscybergames.com 55705`
 
 
 ## Objective
@@ -40,7 +41,7 @@ The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 I opened the `server.py` file with TextEdit to see how the challenge worked behind the scenes. I noticed that the server included **AES** cipher encrypted data. Specifically, I noticed the server was using AES-CTR (counter mode).
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-server.png" alt="server graphic" width="400">
+  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-server.png" alt="Server graphic" width="700">
 </p>
 
 
@@ -50,7 +51,9 @@ As I continued to read through the code, I noticed that both the `KEY` and `N
 
 ```
 KEY = os.urandom(16)
+
 NONCE = os.urandom(8)
+
 ```
 
 Since these values never changed, it appeared that the server was using the **same keystream** to encrypt both the flag and any user supplied input. After doing a bit of research, I learned this is a cryptographic weakness known as **Nonce Reuse**.
@@ -62,14 +65,14 @@ To test the theory, I connected to the challenge instance and copied the “Encr
 Next, I sent a string of 32 zeros (`0000...`) in hexadecimal format to the server. Since XORing with zero returns the original value, the resulting ciphertext revealed the keystream being used by the server.
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-ciphertext.png" alt="ciphertext graphic" width="400">
+  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-ciphertext.png" alt="ciphertext graphic" width="700">
 </p>
 
 ### **3. Solution**
 
 Once I had both the encrypted flag and the keystream, I moved over to CyberChef.
 
-Using  the XOR operation, I combined the `Encrypted flag` with the recovered `Keystream` (the ciphertext of the zeros). Since the XOR is reversible,  the keystream cancelled itself out and revealed the original plaintext.
+Using  the XOR operation, I combined the `Encrypted flag` with the recovered `Keystream` (the ciphertext of the zeros). Since the XOR is reversible, the keystream cancelled itself out and revealed the original plaintext.
 
 The logic looked like this:
 
@@ -80,7 +83,7 @@ Encrypted Flag XOR Keystream = Flag
 The output revealed the flag: `SVIBGR{...}`.
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-cyberchef-flag.png" alt="cyberchef flag graphic" width="400">
+  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-cyberchef-flag.png" alt="Cyberchef flag graphic" width="700">
 </p>
 
 
