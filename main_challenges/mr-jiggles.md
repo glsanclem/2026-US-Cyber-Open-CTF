@@ -9,9 +9,9 @@ hero:
 
 # Mr. Jiggles
 
-**Points:** 100   
-**Difficulty:** Beginner
-**Category:** Forensics
+| Points | Difficulty | Category |
+| :----- | :--------- | :------- |
+| 100 | Beginner | Forensics |
 
 ---
 
