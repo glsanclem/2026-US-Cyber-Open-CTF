@@ -7,28 +7,24 @@ hero:
 ---
 
 
-# Noncesence
+# Noncesense
 
-**Points:** 100  
-**Difficulty:** Beginner
-**Category:** Crypto
+| Points | Difficulty | Category |
+| :----- | :--------- | :------- |
+| 100 | Beginner | Crypto |
 
----
 
 ## Description
 This encryption service will encrypt any plaintext you send it. It also encrypted our flag — can you recover it? Attachment: `nc challenge.ctf.uscybergames.com 55705`
 
----
 
 ## Objective
 The objective was to recover a hidden flag encrypted by a remote server. The server provided an "encryption service" where users could send any plaintext and receive the encrypted version in return. The challenge provided the source code `server.py` to help analyze how the encryption was being handled.
 
----
 
 ## Flag Format
 The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 
----
 
 ## Tools Used
 - TextEdit
@@ -36,17 +32,17 @@ The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 - Socat
 - CyberChef
 
----
 
 ## Methodology
 
 ### **1. Analysis**
 
-I opened the server.py file with TextEdit to see how the challenge worked behind the scenes. I noticed that the server included **AES** cipher encrypted data. Specifically, I noticed the server was using AES-CTR (counter mode).
+I opened the `server.py` file with TextEdit to see how the challenge worked behind the scenes. I noticed that the server included **AES** cipher encrypted data. Specifically, I noticed the server was using AES-CTR (counter mode).
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/4-noncensense-server.png" alt="server graphic" width="400">
+  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-server.png" alt="server graphic" width="400">
 </p>
+
 
 From my understanding, this mode generates a keystream (stream of random bytes) using a `KEY` and a `NONCE`, and then combines that keystream with the plaintext using **XOR**.
 
@@ -66,7 +62,7 @@ To test the theory, I connected to the challenge instance and copied the “Encr
 Next, I sent a string of 32 zeros (`0000...`) in hexadecimal format to the server. Since XORing with zero returns the original value, the resulting ciphertext revealed the keystream being used by the server.
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/4-noncensense-ciphertext.png" alt="ciphertext graphic" width="400">
+  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-ciphertext.png" alt="ciphertext graphic" width="400">
 </p>
 
 ### **3. Solution**
@@ -84,15 +80,13 @@ Encrypted Flag XOR Keystream = Flag
 The output revealed the flag: `SVIBGR{...}`.
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/4-noncensense-cyberchef-flag.png" alt="cyberchef flag graphic" width="400">
+  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-cyberchef-flag.png" alt="cyberchef flag graphic" width="400">
 </p>
 
----
 
 ## Flag
 `SVIBGR{3t_7u_k3y$7r34m}`
 
----
 
 ## MITRE ATT&CK
 <span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
