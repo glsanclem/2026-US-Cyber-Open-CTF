@@ -45,7 +45,7 @@ I opened a terminal on the computer, typed the following strings code, and hit e
 `strings image {attached image file} | tail -n 20`
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-strings-lines-in-terminal.jpg" alt="Terminal lines graphic" width="400">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-strings-lines-in-terminal.png" alt="Terminal lines graphic" width="400">
 </p>
 
 The file listed a bunch of letters and symbols, but what caught my attention were four text files at the bottom titled, “marrakech, tokyo, oman, and iceland.” 
@@ -57,7 +57,7 @@ To unzip those file, I ran the following command in the terminal:
 This created a folder on the desktop with text files. I opened each one and read through the messages for any clue or the flag.
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-tokyo-txt-file.jpg" alt="Tokyo graphic" width="700">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/5-souvenirs-tokyo-txt-file.png" alt="Tokyo graphic" width="700">
 </p>
 
 
