@@ -20,7 +20,7 @@ This encryption service will encrypt any plaintext you send it. It also encrypte
 
 
 ## Objective
-The objective was to recover a hidden flag encrypted by a remote server. The server provided an "encryption service" where users could send any plaintext and receive the encrypted version in return. The challenge provided the source code `server.py` to help analyze how the encryption was being handled.
+The objective was to recover a hidden flag encrypted by a remote server. The server provided an "encryption service" where users could send any plaintext and receive the encrypted version in return. The challenge also provided the source code `server.py` to help analyze how the encryption was being handled.
 
 
 ## Flag Format
@@ -38,10 +38,10 @@ The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 
 ### **1. Analysis**
 
-I opened the `server.py` file with TextEdit to see how the challenge worked behind the scenes. I noticed that the server included **AES** cipher encrypted data. Specifically, I noticed the server was using AES-CTR (counter mode).
+I opened the `server.py` file with TextEdit to see how the challenge worked behind the scenes. I noticed that the server was using **AES** encryption. Specifically, I noticed the server was using AES-CTR (counter mode).
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-server.png" alt="Server graphic" width="700">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/4-noncesense-server.png" alt="Server graphic" width="700">
 </p>
 
 
@@ -49,41 +49,36 @@ From my understanding, this mode generates a keystream (stream of random bytes) 
 
 As I continued to read through the code, I noticed that both the `KEY` and `NONCE` were generated only once when the server started:
 
-```
-KEY = os.urandom(16)
+- KEY = os.urandom(16)
+- NONCE = os.urandom(8)
 
-NONCE = os.urandom(8)
-
-```
-
-Since these values never changed, it appeared that the server was using the **same keystream** to encrypt both the flag and any user supplied input. After doing a bit of research, I learned this is a cryptographic weakness known as **Nonce Reuse**.
+Since these values never changed, it appeared that the server was using the **same keystream** to encrypt both the flag and any input provided by the user. After doing a bit of research, I learned this is a cryptographic weakness known as **Nonce Reuse**.
 
 ### **2. Execution**
 
 To test the theory, I connected to the challenge instance and copied the “Encrypted Flag.”
 
-Next, I sent a string of 32 zeros (`0000...`) in hexadecimal format to the server. Since XORing with zero returns the original value, the resulting ciphertext revealed the keystream being used by the server.
+Next, I sent a string of 32 zeros (`0000...`) in hexadecimal format to the server. Since XOR with zero returns the original value, the resulting ciphertext revealed the keystream being used by the server.
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-ciphertext.png" alt="ciphertext graphic" width="700">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/4-noncesense-ciphertext.png" alt="ciphertext graphic" width="700">
 </p>
 
 ### **3. Solution**
 
 Once I had both the encrypted flag and the keystream, I moved over to CyberChef.
 
-Using  the XOR operation, I combined the `Encrypted flag` with the recovered `Keystream` (the ciphertext of the zeros). Since the XOR is reversible, the keystream cancelled itself out and revealed the original plaintext.
+Using the XOR operation, I combined the `Encrypted flag` with the recovered `Keystream` (the ciphertext of the zeros). Since the XOR is reversible, the keystream cancelled itself out and revealed the original plaintext.
 
 The logic looked like this:
 
-Flag XOR Keystream = Encrypted Flag
-
-Encrypted Flag XOR Keystream = Flag
+- Flag XOR Keystream = Encrypted Flag
+- Encrypted Flag XOR Keystream = Flag
 
 The output revealed the flag: `SVIBGR{...}`.
 
 <p align="center">
-  <img src="/2025_wicys_target_ctf/assets/images/4-noncesense-cyberchef-flag.png" alt="Cyberchef flag graphic" width="700">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/4-noncesense-cyberchef-flag.png" alt="Cyberchef flag graphic" width="700">
 </p>
 
 
