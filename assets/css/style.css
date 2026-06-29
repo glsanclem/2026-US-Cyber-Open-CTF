@@ -46,6 +46,12 @@ body {
  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 } 
 
+/* ------------------- Paragraph Styling -------------------- */
+p {
+ line-height: 1.7;
+ margin-bottom: 1.1rem;
+}
+
 /* ------------------- Links ------------------------------- */ 
 a { 
  color: #CF9FFF; /* Light Violet links */ 
