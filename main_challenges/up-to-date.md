@@ -70,7 +70,7 @@ The recovered Zen-C code revealed an XOR Cipher that used a single key (`0x42`)a
 
 - **Careful with running the challenge script:** Often, `chall.py` is just a map to show how the puzzle was made. Running it can overwrite the evidence (like what happened to the `output.txt`).
 - **Magic Bytes are Clues:** Whenever you see a repeating pattern like `ZN` in a hex file, it's usually a "Header" that tells you where a piece of important data starts.
-- **XOR Spotting:** If you see a list of hex numbers and a single key, such as`0x42`, it is often that XOR was used to hide the data.
+- **XOR Spotting:** If you see a list of hex numbers and a single key, such as `0x42`, it is often that XOR was used to hide the data.
 
 
 ## MITRE ATT&CK
