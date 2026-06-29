@@ -52,7 +52,7 @@ Replace `your_image_name.jpg` with the actual name of your file.
 In the terminal, I noticed a bunch of gibberish appeared (letters and numbers): 
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/2-jiggles-gibberish numberletters.png" alt="terminal gibberish graphic" width="700" height="900">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/2-jiggles-gibberish numberletters.png" alt="terminal gibberish graphic" width="500" height="700">
 </p>
 
 I then installed `binwalk` in the terminal since the data wasn't written in plain text. However, binwalk took forever to install. 
