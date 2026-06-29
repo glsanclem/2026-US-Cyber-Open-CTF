@@ -9,7 +9,7 @@ hero:
 
 ## RESOURCES   
 
-Here’s a collection of materials, notes, and references used during the challenges.  
+A collection of materials, notes, and helpful references.  
 
 - **[Binwalk](https://www.kali.org/tools/binwalk/):** A tool for searching a given binary image for embedded files and executable code.
 - **[CyberChef](https://gchq.github.io/CyberChef/):** An open-source web-based tool that allows users to conduct data manipulation and network data analysis.  
