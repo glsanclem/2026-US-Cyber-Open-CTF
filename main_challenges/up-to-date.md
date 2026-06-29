@@ -74,7 +74,7 @@ The recovered Zen-C code revealed an XOR Cipher that used a single key (`0x42`)a
 
 
 ## MITRE ATT&CK
-<span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
+<span style="color:yellow; font-style:italic;">_Reflections | Suggestions | What was the Attacker Doing?_</span>
 
 This challenge required reconstructing fragmented data and decoding an XOR protected payload to recover the hidden information.
 
