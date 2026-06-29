@@ -42,12 +42,18 @@ header h3,
 /* ------------------- Body Styling ------------------------- */ 
 body { 
  background-color: #0b0b0b; 
- color: #d8d8d8; 
+ color: #e7e7e7; 
  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 } 
 
-/* ------------------- Paragraph Styling -------------------- */
-p {
+/* ------------------- Main Reading Text Styling -------------------- */
+.main-content p,
+.main-content li,
+.content p,
+.content li,
+.site-content p,
+.site-content li {
+ color: #d8d8d8;
  line-height: 1.7;
  margin-bottom: 1.1rem;
 }
