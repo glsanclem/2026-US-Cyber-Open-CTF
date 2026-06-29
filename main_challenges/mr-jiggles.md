@@ -52,26 +52,26 @@ In the terminal, I noticed a bunch of gibberish appeared (letters and numbers):
 
 I then installed `binwalk` in the terminal since the data wasn't written in plain text. However, binwalk took forever to install. 
 
-**Note to self and the viewers**: Remember to install any necessary software prior to the challenges. But in my case my laptop is an older model, I didn’t know which program were truly necessary.
+**Note to self and readers**: Remember to install any necessary software prior to the challenges. However, in my case, having an older version of a computer creates limitations in the type of applications or softwares that can be installed. As such, I had to work with what I got and only installed programs during the process because we really don't know which programs are needed until you are working on the challenges.
+
+I did have Linux installed which covers many of the basic programs, including `binwalk`, but even running Linux takes up lots of computer storage space. Alas, the woes of having an older computer, but where there is a will, there's a way. 
 
 Next, I remembered from a previous CTF challenge, **CyberChef**, which helps decode or decipher encoded text and I quickly pivoted. 
 
-**STEPS**:
-
 At this point, I started testing a few common decoding techniques to see if one of them would reveal something useful.
-- Go to your terminal, highlight the weird text (*gibberish*) which you found in the image, and copy it.
-- Go to CyberChef and paste the text inside the **Input** box located in the top right corner .
+- First, I opened Terminal and highlighted and copied the weird text that looked like *gibberish* which I found in the image.
+- Then I went to CyberChef and pasted the text inside the **Input** box located in the top right corner.
 
-Since the text look like “letters and numbers” and had symbols such as “$/^}_:” I started with the most common operations:
+Since the text look like **letters and numbers** and had symbols such as **$/^}_:** I started with the most common operations:
 
-- Dragged `From Base64` from the left sidebar into the "Recipe" column, but that didn’t work.
-- Dragged `Strings` since it’s showing micro tiny letters in red with symbols such as **@$!…** and Strings helps to remove the red symbols.
+- Dragged `From Base64` from the left sidebar into the **Recipe** column, but that didn’t work.
+- Dragged `Strings` since it’s showing micro tiny letters in red with symbols such as **@$!…** and `Strings` helps to remove the red symbols.
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/2-jiggles-gibberish numberletters-CyberChef.png" alt="CyberChef graphic" width="800">
 </p>
 
-The `Flag` appeared :-)
+Finally, the `Flag` appeared :-)
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/2-jiggles-gibberish numberletters-CyberChefFLAG.png" alt="CyberChef graphic" width="800">
