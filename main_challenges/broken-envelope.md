@@ -66,7 +66,7 @@ As soon as I addeded the operation **Base64**, the flag appeared in the Output b
 ## MITRE ATT&CK
 <span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
 
-Based on the challenge description, "A cryptolocker affiliate passed through the firm's file shares and partly corrupted several project archives...", the attacker behavior is ransomware impacting files.
+Based on the challenge description, "A cryptolocker affiliate passed through the firm's file shares and partly corrupted several project archives...", the potential attacker behavior is ransomware impacting files and this MITRE ATT&CK came to mind:
 
 | Field | Details |
 |:--------|:---------|
