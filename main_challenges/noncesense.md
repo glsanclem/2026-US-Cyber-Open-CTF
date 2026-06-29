@@ -87,9 +87,7 @@ The output revealed the flag: `SVIBGR{...}`.
 
 
 ## MITRE ATT&CK
-<span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
-
-**CWE-323: Reusing a Nonce, Key Pair in Encryption**
+<span style="color:yellow; font-style:italic;">_What was the Attacker Doing? | Reflections | Suggestions_</span>
 
 | Field | Details |
 |:--------|:---------|
