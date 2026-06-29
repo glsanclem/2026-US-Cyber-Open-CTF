@@ -51,7 +51,7 @@ Click on any box below to view the challenge.
   </div>
 
   <div class="challenge-box">
-    <h3><a href="main_challenges/noncensense">Noncensense</a></h3>
+    <h3><a href="main_challenges/noncesense">Noncesense</a></h3>
     <p><strong>Points:</strong> 100</p>
     <p><strong>Category:</strong> Crypto</p>
     <p><strong>Difficulty:</strong> Beginner</p>
