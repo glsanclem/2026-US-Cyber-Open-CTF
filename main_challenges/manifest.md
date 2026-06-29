@@ -9,31 +9,26 @@ hero:
 
 # Manifest
 
-**Points:** 205
-**Level:** Hard
-**Category:** Network Forensics
+| Points | Difficulty | Category |
+| :----- | :--------- | :------- |
+| 205 | Hard | Network Forensics |
 
----
 
 ## Description
 Lakeshore Threat Lab confirmed an attacker pivoted from `FIN-WS-07` to `NAS-MARITIME-01`, the Wabash Marine NAS that hosts the internal Lakefront Fleet Manager web app on port 8088. Imani Boateng captured a short east-west slice of that pivot. Her capture is attached.
 
----
 
 ## Objective
 Identify and reconstruct the exfiltrated data from an unauthorized HTTP GET request during an east-west network pivot to recover the hidden flag.
 
----
 
 ## Flag Format
 The flag should be in the format: SVIUSCG{This_is_a_Flag}
 
----
 
 ## Tools Used
 Wireshark, CyberChef
 
----
 
 ## Methodology
 Saved `.pcap` file on desktop, and opened it with Wireshark. 
@@ -46,16 +41,16 @@ I reviewed the platform to see if anything jumped out at me and noticed in the I
 
 I clicked on the entry and in the bottom left panel, I noticed four Line-based text data. 
 
-```jsx
-crew_manifests_q1_2026.csv\n
-crew manifests_q2_2026.csv\n
-crew_manifests_q4_2025.csv\n
-billet_summarv_2026.json\n
-```
+- `crew_manifests_q1_2026.csv\n`
+- `crew manifests_q2_2026.csv\n`
+- `crew_manifests_q4_2025.csv\n`
+- `billet_summarv_2026.json\n`
 
 More questions came to mind: _Why was q3_2026 not included_? _Where did q4_2025 come from when the other line-based text say 2026_? _Was that information which the hacker was trying to obtain?_ 
 
-I needed to investigate further and find the HTTP GET or HTTP POST request that triggered that text and the questions in my mind. I looked back again at all the entries in the “Info” column for something close to those text exchange. I found a GET entry that specifically mentioned: `GET /api/v1/personnel/crew_manifests_q2_2026.csv HTTP/1.1`
+I needed to investigate further and find the HTTP GET or HTTP POST request that triggered that text and the questions in my mind. I looked back again at all the entries in the “Info” column for something close to those text exchange. 
+
+I found a GET entry that specifically mentioned: `GET /api/v1/personnel/crew_manifests_q2_2026.csv HTTP/1.1`
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/7-manifest-image-two.png" alt="Image two graphic" width="400">
@@ -81,15 +76,13 @@ There we have it! The output box revealed the flag:
 
 In summary, for this challenge, I performed a full-scale forensic investigation which included identifying the attacker’s movement, isolating the malicious network traffic, extracting the stolen data from a packet stream, and using CyberChef to decode the final payload. 
 
----
 
 ## Flag
 `SVIUSCG{wabash_finws_pivot_nas_maritime_01}`
 
----
 
 ## MITRE ATT&CK
-<span style="color:yellow; font-style:italic;">(What was the Attacker Doing? | Reflections | Suggestions)</span>
+<span style="color:yellow; font-style:italic;">_Reflections | Suggestions | What was the Attacker Doing?_</span>
 
 Let's simplify things by ignoring Wireshark, CyberChef, and the methodology. Instead, let's view it from the attacker's perspective. The attacker moved from one computer to another, they found a file they wanted, and sent an HTTP GET request asking for that file (`crew_manifest_q2_2026.csv`). The server responded with the file and the attacker now had the data. The attacker's goal wasn't to hide or encrypt, but rather to collect data. Thus, I believe a MITRE ATT&CK to keep in mind in this scenario is the Collection tactic. While there are many type of techniques under Collection, the closest one that caught my eye was "data from local system," because the attacker was simply collecting a file from a computer. 
 
