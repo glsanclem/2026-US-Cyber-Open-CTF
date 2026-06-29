@@ -33,12 +33,6 @@ The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 ## Tools Used
 The **Terminal** was used as a primary tool to execute **Python** (`python3 solve.py`) and **File Management** to navigate all of the folders from the Desktop to organizing the `output.txt`, `chall.py`, and `solve.py` files.
 
-<span style="color:yellow; font-style:italic;">Summary:</span>
-- **Editor:** TextEdit
-- **Environment:** macOS Terminal
-- **Language:** Python 3
-- **Method:** Custom script for data extraction → XOR decryption for final reveal.
-
 ---
 
 ## Methodology + Solution
