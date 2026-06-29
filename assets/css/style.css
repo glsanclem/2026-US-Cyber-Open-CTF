@@ -164,3 +164,23 @@ code {
   padding: 2px 6px;
   font-family: Consolas, Monaco, "Courier New", monospace;
 }
+
+/* ------------------- Table Styling -------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th,
+td {
+  border: 1px solid #d8d8d8;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  color: #39FF14;
+  background-color: #111111;
+}
