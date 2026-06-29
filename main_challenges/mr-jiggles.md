@@ -62,10 +62,10 @@ At this point, I started testing a few common decoding techniques to see if one 
 - First, I opened Terminal and highlighted and copied the weird text that looked like *gibberish* which I found in the image.
 - Next, I went to CyberChef and pasted the text inside the **Input** box located in the top right corner.
 
-Since the text look like **letters and numbers** and had symbols such as **$/^}_:** I started with the most common operations:
+Since the text look like **letters and numbers** and had micro tiny red symbols such as `$/^}_:` I started with the most common operations:
 
 - Dragged `From Base64` from the left sidebar into the **Recipe** column, but that didn’t work.
-- Dragged `Strings` since it revealed micro tiny letters in red with symbols such as `@$!…` and the `Strings` operation helped to remove the red symbols.
+- Dragged `Strings` operation which helped to remove the red symbols.
 
 <p align="center">
   <img src="/2026-US-Cyber-Open-CTF/assets/images/2-jiggles-gibberish numberletters-CyberChef.png" alt="CyberChef graphic" width="800">
