@@ -8,6 +8,7 @@ hero:
 
 
 # Up to Date
+
 | Points | Difficulty | Category |
 | :----- | :--------- | :------- |
 | 100 | Beginner | Misc |
@@ -34,7 +35,7 @@ The **Terminal** was used as a primary tool to execute **Python** (`python3 solv
 The first step included analyzing the file `chall.py` to understand how the secret was hidden. To open the python file, I right clicked and opened the file with a **text editor**.
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-chall.png" alt="Chall graphic" width="800">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-chall.png" alt="Chall graphic" width="700" height="900">
 </p>
 
 I discovered the `chall.py` file included secret text split into five chunks and each chunk was wrapped was in a packet starting with a Magic Header (ZN), followed by a Sequence (Seq) number, and the Length (Len) of the data. It seems like the script added fake noise to the file to confuse the search tools.
@@ -44,19 +45,19 @@ Since the challenge also included a file called `solve.py`, I took a look at it 
 I used the Python script, `solve.py` to recover the flag, which scanned the `output.txt` file for the ZN magic bytes.
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-output.png" alt="Chall graphic" width="300" height="500">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-output.png" alt="Chall graphic" width="700">
 </p>
 
 It also checked if the packet started with the correct Sequence ID and placed the chunks back together in the proper order. A piece of code was recovered in a fictional language called **Zen-C**.
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-solv.png" alt="Chall graphic" width="400">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-solv.png" alt="Chall graphic" width="700">
 </p>
 
 The recovered Zen-C code revealed an XOR Cipher that used a single key (`0x42`)and the flag was revealed! 
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-flag-revealed.png" alt="Chall graphic" width="400">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-flag-revealed.png" alt="Chall graphic" width="700">
 </p>
 
 
