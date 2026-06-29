@@ -87,7 +87,7 @@ The output revealed the flag: `SVIBGR{...}`.
 
 
 ## MITRE ATT&CK
-<span style="color:yellow; font-style:italic;">_What was the Attacker Doing? | Reflections | Suggestions_</span>
+<span style="color:yellow; font-style:italic;">_Reflections | Suggestions | What was the Attacker Doing?_</span>
 
 | Field | Details |
 |:--------|:---------|
