@@ -19,7 +19,7 @@ Our newly hired developer at our company seems to be big on vibe coding, and ask
 
 
 ## Objective
-The objective was to recover the hidden flag from a set of provided files (`chall.py` and `output.txt`).
+The objective was to recover the hidden flag from a set of provided files: `chall.py` and `output.txt`
 
 
 ## Flag Format
@@ -27,7 +27,8 @@ The flag format will either be: SVBRG{This_is_a_Flag} or SVIBGR{This_is_a_Flag}
 
 
 ## Tools Used
-The **Terminal** was used as a primary tool to execute **Python** (`python3 solve.py`) and **File Management** to navigate all of the folders from the Desktop to organizing the `output.txt`, `chall.py`, and `solve.py` files.
+- **Terminal** was used as a primary tool to execute **Python** `python3 solve.py`
+- **File Management** to navigate all of the folders on the Desktop and organizing the files.
 
 
 ## Methodology
@@ -57,7 +58,7 @@ It also checked if the packet started with the correct Sequence ID and placed th
 The recovered Zen-C code revealed an XOR Cipher that used a single key (`0x42`)and the flag was revealed! 
 
 <p align="center">
-  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-flag-revealed.png" alt="Chall graphic" width="700">
+  <img src="/2026-US-Cyber-Open-CTF/assets/images/3-uptodate-flag-reveal.png" alt="Flag graphic" width="700">
 </p>
 
 
