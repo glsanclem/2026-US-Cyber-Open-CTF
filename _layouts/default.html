@@ -6,26 +6,33 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 <body>
-  <!-- Header Block -->
+
+    <!-- NAVIGATION TABS (before header) -->
+  
+  <nav class="site-nav">
+    <a href="{{ site.baseurl }}/" class="nav-link">HOME</a>
+    <a href="{{ site.baseurl }}/resources" class="nav-link">RESOURCES</a>
+    <a href="https://glsanclem.github.io/silvrnebyxlab/" class="nav-link">SILVRNEBYX</a>
+  </nav>
+  
+  <!-- HEADER BLOCK -->
+  
   <header>
     <h1 class="site-title">{{ page.hero.heading }}</h1>
     <p class="site-description">{{ page.hero.text }}</p>
   </header>
 
-  <!-- Navigation Tabs (beneath header) -->
-  <nav class="site-nav">
-    <a href="{{ site.baseurl }}/" class="nav-link">Home</a>
-    <a href="{{ site.baseurl }}/resources" class="nav-link">Resources</a>
-  </nav>
-
-  <!-- Main Content -->
+  <!-- MAIN CONTENT -->
+  
   <main class="main-content">
     {{ content }}
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
+  
   <footer>
-    <Copyright p>&copy; 2026 SILVRNEBYX CYBER LAB. All rights reserved. | Operated under LAXURYS | Curated by Gaudys L. Sanclemente </p>
+    <p>&copy; 2026 SILVRNEBYX. All rights reserved. | Under the LAXURYS™ umbrella. </p>
   </footer>
+
 </body>
-</html>
+
