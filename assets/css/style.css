@@ -1,8 +1,9 @@
 /* ========================================================= 
-Hacker Theme Base + Cayman-style Gradient Header Block 
+HACKER THEME BASE + CAYMAN-STYLE GRADIENT HEADER BLOCK  
 ========================================================= */ 
 
-/* ---------------------- Header Block ---------------------- */ 
+/* ---------------------- HEADER BLOCK ---------------------- */ 
+
 header, .site-header, .header { 
  background: linear-gradient(90deg, #013220 0%, #3b0b4d 100%); 
  color: #ffffff; 
@@ -13,7 +14,8 @@ header, .site-header, .header {
  position: relative; 
 } 
 
-/* ------------------- Main Title in Header ------------------ */ 
+/* ------------------- MAIN TITLE IN HEADER ------------------ */ 
+
 .site-title, .site-header h1, header .site-title { 
  color: #39ff14; /* neon green so it pops */ 
  font-size: 2.4rem; 
@@ -23,7 +25,8 @@ header, .site-header, .header {
  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 } 
 
-/* ------------------- Subtitle / Description --------------- */ 
+/* ------------------- SUBTITLE / DESCRIPTION --------------- */ 
+
 header .site-description, 
 .site-header .site-description, 
 header p.site-description, 
@@ -39,14 +42,20 @@ header h3,
  margin-top: 0.45rem; 
 } 
 
-/* ------------- Body Styling (Default Color of Entire Page) ------------------ */ 
-body { 
- background-color: #0b0b0b; 
- color: #bfbfbf; 
- font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-} 
+/* ------------- BODY STYLING (Default Color of Entire Page) ------------------ */ 
 
-/* ----------- Main Reading Text Styling (Target Text Inside Content Area) ---------------- */
+body {
+  background-color: #0b0b0b;
+  color: #bfbfbf;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------- MAIN READING TEXT STYLING (Target Text Inside Content Area) ---------------- */
+
 .main-content p,
 .main-content li,
 .content p,
@@ -58,12 +67,8 @@ body {
  margin-bottom: 1.1rem;
 }
 
-/* ------------------- Links ------------------------------- */ 
-a { 
- color: #CF9FFF; /* Light Violet links */ 
-} 
+/* ------------------- FOOTER STYLING ---------------------- */ 
 
-/* ------------------- Footer Styling ---------------------- */ 
 footer, .site-footer { 
  background-color: #000000; 
  color: #ffffff; 
@@ -72,13 +77,15 @@ footer, .site-footer {
  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 } 
 
-/* ------------------- Content Spacing -------------------- */ 
+/* ------------------- CONTENT SPACING -------------------- */ 
+
 .main-content, .content, .site-content {
  margin-top: 5rem; /* adds space after nav menu and content */ 
  margin-bottom: 5rem; /* add space above the footer */ 
 } 
 
-/* ----- Home Page Section Titles + Challenge Name Page Title --------- */ 
+/* ----- HOME PAGE SECTION TITLES + CHALLENGE NAME PAGE TITLE --------- */ 
+
 h1 {
  color: #ffffff;
  font-family: inherit;
@@ -91,7 +98,8 @@ h2, h3 {
  font-weight: bold; /* keep bold styling if used by Hacker theme */ 
 } 
 
-/* ------------------- Challenge Box Styling -------------------- */ 
+/* ------------------- CHALLENGE BOX STYLING -------------------- */ 
+
 .challenge-box { 
  background-color: #1a1a1a; /* dark gray so it contrasts with body */ 
  border: 1px solid #39ff14; /* neon green border to match Hacker theme */ 
@@ -102,64 +110,113 @@ h2, h3 {
  transition: transform 0.2s ease, box-shadow 0.2s ease; 
 } 
 
-/* hover effect for a little interactivity */ 
+/* ------------------- HOVER EFFECT FOR LITTLE INTERACTIVE ------------------- */ 
+
 .challenge-box:hover { 
  transform: translateY(-2px); 
  box-shadow: 0 8px 18px rgba(0,0,0,0.7); 
 } 
 
-/* inner headings inside the box (like title, points, category) */ 
+/* ------------------- LINKS ------------------------------- */ 
+
+a { 
+ color: #b026ff; /* Neon Cyber Purple links */ 
+} 
+
+/* ------------------- INNER HEADING INSIDE BOX (title, points, category) ------------------- */ 
+
 .challenge-box h3 { 
  color: #39ff14; /* neon green to match Hacker titles */ 
  margin-top: 0; 
 } 
 
-/* bold the small metadata */ 
+/* ------------------- BOLD THE SMALL METADATA ------------------- */ 
+
 .challenge-box strong { 
  color: #e7e7e7; 
  font-weight: 600; 
 } 
 
-/* adjust normal paragraph text inside the box */ 
+/* ------------------- ADJUST NORMAL PARAGRAPH TEXT INSIDE BOX ------------------- */ 
+
 .challenge-box p, .challenge-box li { 
  color: #e7e7e7; 
  line-height: 1.5; 
 } 
 
-/* standardize spacing between bullets */ 
+/* -------------------STANDARDIZE SPACING BETWEEN BULLETS ------------------- */ 
+
 ul li { 
  margin-bottom: 0.8rem; 
 } 
 
-/* ------------------- Navigation Tabs Styling ------------------ */ 
-.site-nav { 
- display: flex; 
- justify-content: flex-end; /* top right */ 
- gap: 1.5rem; /* space between tabs */ 
- margin-top: 1rem; /* below header */ 
- margin-right: 2rem; 
-} 
+/* ------------------- TOP NAVIGATION MENU ------------------- */
 
-.site-nav .nav-link { 
- color: #39ff14; /* neon green */ 
- font-weight: bold; 
- text-decoration: none; 
- font-size: 1rem; 
-} 
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  background-color: #000000;
+}
 
-.site-nav .nav-link:hover { 
- text-decoration: underline; 
- color: #ccff66; /* subtle hover effect */ 
-} 
+/* ------------------- LOGO ON LEFT ------------------- */
 
-/* Wrap the whole main content so it doesn't stretch edge to edge */ 
+.brand-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* ------------------- MENU TABS ON THE RIGHT ------------------- */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.site-nav .nav-link {
+  color: #39ff14;
+  font-weight: none;
+  text-decoration: none;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.site-nav .nav-link:hover {
+  color: #b026ff;
+  text-decoration: underline;
+}
+
+/* ------------- WRAP THE WHOLE MAIN CONTENT TO NOT STRETCH EDGE TO EDGE -------------- */ 
+
 .main-content, .content, .site-content { 
  margin: 1.25rem auto; /* centers the content */ 
  padding: 0 1.5rem 3rem; /* side padding + bottom spacing */ 
  max-width: 1100px; /* a larger number pushes the content further out */ 
+ width: 100%;
+ box-sizing: border-box;
 }
 
-/* Grid layout for challenge boxes */
+.main-content {
+  flex: 1;
+}
+
+/* ------------------- GRID LAYOUT FOR CHALLENGE BOXES ------------------- */
+
 .challenge-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -167,7 +224,8 @@ ul li {
   margin-top: 2rem;
 }
 
-/* ------------------- Inline Code Styling -------------------- */
+/* ------------------- INLINE CODE STYLING -------------------- */
+
 code {
   color: #4FD1C5;
   background-color: #111111;
@@ -177,7 +235,7 @@ code {
   font-family: Consolas, Monaco, "Courier New", monospace;
 }
 
-/* ------------------- Table Styling -------------------- */
+/* ------------------- TABLE STYLING -------------------- */
 
 table {
   width: 100%;
