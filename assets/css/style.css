@@ -201,6 +201,53 @@ ul li {
   text-decoration: underline;
 }
 
+/* ------------------- CHALLENGES DROPDOWN ------------------- */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: #39ff14;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-button:hover {
+  color: #b026ff;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: #111111;
+  border: 1px solid #39ff14;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #e8e8ee;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #b026ff;
+  color: #ffffff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 /* ------------- WRAP THE WHOLE MAIN CONTENT TO NOT STRETCH EDGE TO EDGE -------------- */ 
 
 .main-content, .content, .site-content { 
