@@ -8,21 +8,38 @@
   
 <body>
 
-    <!-- NAVIGATION TABS (before header) -->
+  <!-- NAVIGATION TABS (before header) -->
 
-  <nav class="site-nav">
+<nav class="site-nav">
 
     <a href="{{ site.baseurl }}/" class="brand-link">
       <img src="{{ site.baseurl }}/assets/images/logo-silvrnebyx.png" alt="SILVRNEBYX logo" class="nav-logo">
     </a>
 
-    <div class="nav-links">
-      <a href="https://glsanclem.github.io/2026-US-Cyber-Open-CTF/" class="nav-link">HOME</a>
-      <a href="{{ site.baseurl }}/resources" class="nav-link">RESOURCES</a>
-      <a href="https://glsanclem.github.io/silvrnebyxlab/" class="nav-link">SILVRNEBYX</a>
+<div class="nav-links">
+
+  <a href="https://glsanclem.github.io/2026-US-Cyber-Open-CTF/" class="nav-link">HOME</a>
+
+  <div class="dropdown">
+
+    <button class="dropdown-button">CHALLENGES</button>
+
+    <div class="dropdown-menu">
+      <a href="{{ site.baseurl }}/main_challenges/mr-jiggles">Mr. Jiggles</a>
+      <a href="{{ site.baseurl }}/main_challenges/up-to-date">Up to Date</a>
+      <a href="{{ site.baseurl }}/main_challenges/noncesense">Noncesense</a>
+      <a href="{{ site.baseurl }}/main_challenges/souvenirs">Souvenirs</a>
+      <a href="{{ site.baseurl }}/main_challenges/broken-envelope">Broken Envelope</a>
+      <a href="{{ site.baseurl }}/main_challenges/manifest">Manifest</a>
     </div>
 
-  </nav>
+  </div>
+
+  <a href="{{ site.baseurl }}/resources" class="nav-link">RESOURCES</a>
+
+  <a href="https://glsanclem.github.io/silvrnebyxlab/" class="nav-link">SILVRNEBYX</a>
+
+</div>
   
   <!-- HEADER BLOCK -->
   
